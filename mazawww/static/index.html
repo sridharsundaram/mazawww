@@ -1,11 +1,11 @@
 <html>
 <head>
-<title>MAZA LEARN</title>
+<title>Maza Learn</title>
 <style type="text/css">
 
-  #spinner1 div {
+  div.spinner1 {
     position: absolute;
-    width: 220px;
+    width: 320px;
     height: 220px;
     border: 1px solid #ccc;
     background: rgba(100,100,100,0.8);
@@ -14,9 +14,10 @@
     font-size: 16px;
     color:rgb(255,255,255);
     -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    visibility: hidden;
   }
 
-  #spinner div {
+  .spinner div {
     position: absolute;
     width: 120px;
     height: 120px;
@@ -28,12 +29,12 @@
     -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
   }
 
-  #spinner .face1 { -webkit-transform: translateZ(60px);                                }
-  #spinner .face2 { -webkit-transform: rotateY(90deg) translateZ(60px);                 }
-  #spinner .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);  }
-  #spinner .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px); }
-  #spinner .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px); }
-  #spinner .face6 { -webkit-transform: rotateX(-90deg) translateZ(60px);                }
+  .spinner .face1 { -webkit-transform: translateZ(60px);                                }
+  .spinner .face2 { -webkit-transform: rotateY(90deg) translateZ(60px);                 }
+  .spinner .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);  }
+  .spinner .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px); }
+  .spinner .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px); }
+  .spinner .face6 { -webkit-transform: rotateX(-90deg) translateZ(60px);                }
 
   @-webkit-keyframes spincube {
     from,to  {                                                    }
@@ -44,7 +45,7 @@
     83%      { -webkit-transform: rotateX(90deg);                 }
   }
 
-  #spinner {
+  .spinner {
     -webkit-animation-name: spincube;
     -webkit-animation-timing-function: ease-in-out;
     -webkit-animation-iteration-count: infinite;
@@ -52,13 +53,13 @@
     -webkit-transform-style: preserve-3d;
     -webkit-transform-origin: 60px 60px 0;
   }
- #spinner:hover { 
+ .spinner:hover { 
     -webkit-animation-play-state: paused;
   }
 
 div.hidden {visibility:hidden;}
 
-#cont2
+div.cont1
 {
 	width:120px;
 	height:120px;
@@ -67,7 +68,7 @@ div.hidden {visibility:hidden;}
 	top:25%;
 	margin:-100px 0 0 -150px;
 }
-#cont3
+div.cont3
 {
 	width:120px;
 	height:120px;
@@ -79,73 +80,97 @@ div.hidden {visibility:hidden;}
 
 </style>
 <script type="text/javascript">
-function clearAllMessages()
-{
-	document.getElementById('aboutus').style.visibility='hidden';
-	document.getElementById('mazaisfun').style.visibility='hidden';
-	document.getElementById('contactus').style.visibility='hidden'; 
-	document.getElementById('lcmgame').style.visibility='hidden';
- }
+  function showOnly(id) {
+    var menu = ['aboutus', 'mazaisfun', 'contactus', 'monkeymath'];
+    for (var i = 0; i < menu.length; i++) {
+      var elem = document.getElementById(menu[i]);
+      if (menu[i] != id) {
+        elem.style.visibility = 'hidden';
+      } else {
+        elem.style.visibility = 
+            (elem.style.visibility != 'visible') ? 'visible' : 'hidden';
+      }
+    }
+	}
 </script>
 </head>
 <body>
 <table cellpadding="2"  width = "100%">
 <tr>
 <td width="33%" height="200" align="left" valign = "top">
-    <div id="spinner1">
-        <div id="lcmgame"  class="hidden"><br />LCM is the Least Common Multiple and HCF is the Highest Common Factor. <br /><br />Many children find these two concepts confusing and are not sure when to use what in real life and test problems. <br /><br />Play this game and develop your intution about LCM and HCF.</div>
+    <div class="spinner1" id="monkeymath">
+        <div>
+          <p> Monkey Math is a series of games to make math intuitive.
+          <p>LCM is the Least Common Multiple and HCF is the Highest Common Factor. 
+          <p>Many children find these two concepts confusing and are not sure 
+          when to use what in real life and test problems. 
+          <p>This game develops intution about LCM and HCF.
+        </div>
     </div>
 </td>
 <td width="33%" height="200" align="left" valign = "top"></td>
 <td width="33%" height="200" align="left" valign = "top">
-    <div id="spinner1">
-        <div id="mazaisfun"  class="hidden"><br />Maza Learn is experimenting with fun cognitive learning models with a set of scenarios in which language or any other subject learning can be grounded in use. <br /><br />The scenario engine allows a declarative specification of scenarios covering a use-case and corresponding adaptive game-based associations to learn from that scenario.
-</div>
+    <div class="spinner1" id="mazaisfun">
+       <p>We want to make learning fun and accessible.
+       <p>Paraphrasing Confucius - 
+       <blockquote>I hear, I forget. <br>I see, I remember.<br>I do, I understand</blockquote>
+       <p>We create fun games that provide intuition into concepts. 
     </div>
 </td>
 </tr>
 <tr>
 <td width="33%" height="200" align="center" valign = "top"></td>
 <td width="33%" height="200" align="center" valign = "top">
-    <div id="cont3">
-    <div id="spinner">
-    <div class="face1" onclick="clearAllMessages();document.getElementById('aboutus').style.visibility='visible';">About Us</div>
-    <div class="face2" onclick="clearAllMessages();document.getElementById('mazaisfun').style.visibility='visible';">Maza is Fun</div>
-    <div class="face3" onclick="clearAllMessages();document.getElementById('contactus').style.visibility='visible'; ">Contact Us</div>
-    <div class="face4" onclick="clearAllMessages();document.getElementById('mazaisfun').style.visibility='visible';">Maza is Fun</div>
-    <div class="face5" onclick="clearAllMessages();document.getElementById('lcmgame').style.visibility='visible'; ">LCM Game</div>
-    <div class="face6" onclick="clearAllMessages();document.getElementById('mazaisfun').style.visibility='visible';">Maza is Fun</div>
-    </div>
-    <div id="cont2">
-    <div id="spinner">
-    <div class="face1" onclick="clearAllMessages();document.getElementById('mazaisfun').style.visibility='visible';">Maza is Fun</div>
-    <div class="face2" onclick="clearAllMessages();document.getElementById('contactus').style.visibility='visible'; ">Contact Us</div>
-    <div class="face3" onclick="clearAllMessages();document.getElementById('mazaisfun').style.visibility='visible';">Maza is Fun</div>
-    <div class="face4" onclick="clearAllMessages();document.getElementById('lcmgame').style.visibility='visible'; ">LCM Game</div>
-    <div class="face5" onclick="clearAllMessages();document.getElementById('mazaisfun').style.visibility='visible';">Maza is Fun</div>
-    <div class="face6" onclick="clearAllMessages();document.getElementById('aboutus').style.visibility='visible'; ">About Us</div>
-    </div>
-    <div id="cont2">
-    <div id="spinner">
-    <div class="face1" onclick="clearAllMessages();document.getElementById('contactus').style.visibility='visible'; ">Contact Us</div>
-    <div class="face2" onclick="clearAllMessages();document.getElementById('mazaisfun').style.visibility='visible';">Maza is Fun</div>
-    <div class="face3" onclick="clearAllMessages();document.getElementById('lcmgame').style.visibility='visible'; ">LCM Game</div>
-    <div class="face4" onclick="clearAllMessages();document.getElementById('mazaisfun').style.visibility='visible';">Maza is Fun</div>
-    <div class="face5" onclick="clearAllMessages();document.getElementById('aboutus').style.visibility='visible'; ">About Us</div>
-    <div class="face6" onclick="clearAllMessages();document.getElementById('mazaisfun').style.visibility='visible';">Maza is Fun</div>
+    <div class="cont3">
+      <div class="spinner">
+        <div class="face1" onclick="showOnly('aboutus');">About Us</div>
+        <div class="face2" onclick="showOnly('mazaisfun');">Learning = Fun</div>
+        <div class="face3" onclick="showOnly('contactus'); ">Contact Us</div>
+        <div class="face4" onclick="showOnly('mazaisfun');">Learning = Fun</div>
+        <div class="face5" onclick="showOnly('monkeymath'); ">Monkey Math</div>
+        <div class="face6" onclick="showOnly('mazaisfun');">learning = Fun</div>
+      </div>
+      <div class="cont1">
+        <div class="spinner">
+          <div class="face1" onclick="showOnly('mazaisfun');">Learning = Fun</div>
+          <div class="face2" onclick="showOnly('contactus'); ">Contact Us</div>
+          <div class="face3" onclick="showOnly('mazaisfun');">Learning = Fun</div>
+          <div class="face4" onclick="showOnly('monkeymath'); ">Monkey Math</div>
+          <div class="face5" onclick="showOnly('mazaisfun');">Learning = Fun</div>
+          <div class="face6" onclick="showOnly('aboutus'); ">About Us</div>
+        </div>
+        <div class="cont1">
+          <div class="spinner">
+            <div class="face1" onclick="showOnly('contactus'); ">Contact Us</div>
+            <div class="face2" onclick="showOnly('mazaisfun');">Learning = Fun</div>
+            <div class="face3" onclick="showOnly('monkeymath'); ">Monkey Math</div>
+            <div class="face4" onclick="showOnly('mazaisfun');">Learning = Fun</div>
+            <div class="face5" onclick="showOnly('aboutus'); ">About Us</div>
+            <div class="face6" onclick="showOnly('mazaisfun');">Maza is Fun</div>
+          </div>
+        </div>
+      </div>
     </div>
 </td>
 <td width="33%" height="200" align="center" valign = "top"></td>
 </tr>
 <tr>
 <td width="33%" height="200" align="center" valign = "top">
-    <div id="spinner1">
-        <div id="aboutus"  class="hidden"><br />Sridhar Sundaram <br /> B.Tech (IITDelhi), MS Ph.D (Cornell University). MindsEye, Lotus Interworks, Google,15 patents filed. <br /><br /> Rishi Chandra  <br />B.Tech (IITKanpur), Infosys, HCL, InterSolutions, eBookers, CommerciaMystica, Produced award-winning hindi feature film.</div>
+    <div class="spinner1" id="aboutus">
+         <p>Sridhar Sundaram<br/>
+         Co-founder. Formely worked at Google, Lotus Interworks and co-founded MindsEye. Ph.D at
+         Cornell. Goal - to make learning fun and easily accessible.  
+        
+        <p>Rishi Chandra<br/>
+        Co-founder. Earlier co-founded eTech (of eBookers), CommerciaMystica, produced award-winning film, worked at 
+          Intersolutions. Goal - Make learning accessible to anyone with the drive.
     </div>
 <td width="33%" height="200" align="center" valign = "top"></td>
 <td width="33%" height="200" align="center" valign = "top">
-    <div id="spinner1">
-        <div id="contactus"  class="hidden"><br /><br /><br />Sridhar Sundaram <br /> sridhar.sundaram@mazalearn.com<br /><br /><br /><br /> Rishi Chandra  <br />rishi.chandra@mazalearn.com</div>
+    <div class="spinner1" id="contactus">
+        <div>
+        <br /><br /><br />Sridhar Sundaram <br /> sridhar.sundaram@mazalearn.com
+        <br /><br /><br /><br /> Rishi Chandra  <br />rishi.chandra@mazalearn.com</div>
     </div>
 </td>
 </tr>
