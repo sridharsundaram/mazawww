@@ -5,16 +5,26 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <style type="text/css">
 
+  #mainmenu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 100px;
+    margin-left: 150px;
+  }
+  #submenu {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    margin-top: 200px;
+    margin-left: -250px;
+  }
   div.spinner1 {
     position: absolute;
     top:50%;
     left:50%;
-    margin-top: -250px;
-    margin-left: -275px;
-    width: 320px;
-    height: 220px;
-    border: 1px solid #ccc;
-    background: rgba(0,100, 255,0.8);
+    margin-top: -350px;
+    margin-left: -425px;
     text-align: center;
     line-height: 16px;
     font-size: 16px;
@@ -136,6 +146,12 @@
 
 div.hidden {visibility:hidden;}
 
+.mainimg {
+    opacity:0.7;
+    filter:alpha(opacity=70);
+    height: 400px;
+}
+
 div.cont1
 {
 	width:120px;
@@ -173,25 +189,22 @@ div.cont3
       }
     }
 	}
+	
+	function showPresentation() {
+	   var link = "https://docs.google.com/presentation/pub?id=1qgECsnAzmzL0-g25EQs2oV7AQE5xeLU-6Z7Q3wXXYHY&start=false&loop=false&delayms=3000";
+	   window.open(link, "_blank");
+	}
+	
+	function showDemo() {
+	  var link = "science/demo";
+	  window.open(link, "_blank");
+	}
 </script>
 </head>
 <body style="background-color: rgba(50,150,200,0.5)">
 <!-- <body background="images/splash.jpg"> -->
 <h1 align="center">Maza Learn</h1>
-<table cellpadding="2"  width = "100%">
-<tr>
-<td width="33%" height="200" align="left" valign = "top">
-</td>
-
-<td width="33%" height="200" align="left" valign = "top">
-</td>
-<td width="33%" height="200" align="left" valign = "top">
-</td>
-</tr>
-<tr>
-<td width="33%" height="200" align="center" valign = "top">
-</td>
-<td width="33%" height="200" align="center" valign = "top">
+  <div id="mainmenu">
     <div class="cont3">
       <div class="spinner" id="spin1">
         <div class="face1" onclick="showOnly('aboutus');">About Us</div>
@@ -222,48 +235,36 @@ div.cont3
         </div>
       </div>
     </div>
-</td>
-<td width="33%" height="200" align="center" valign = "top"></td>
-</tr>
-<tr>
-<td width="33%" height="200" align="center" valign = "top">
-</td>
-<td width="33%" height="200" align="center" valign = "top">
-</td>
-<td width="33%" height="200" align="center" valign = "top">
-</td>
-</tr>
-</table>
     <div class="spinner1" id="scienceengine">
-       <img src="images/scienceengine.jpg" height=400 onclick='showOnly("scienceengine")'>
+       <img class="mainimg" src="images/scienceengine.jpg" height=400 onclick='showOnly("scienceengine")'>
     </div>
     <div class="spinner1" id="medium">
-       <img src="images/medium.jpg" height=400>
+       <img class="mainimg" src="images/medium.jpg" height=400>
     </div>
     <div class="spinner1" id="interactive">
-       <img src="images/doinginteractivity.jpg" height=400 onclick='showOnly("interactive")'>
+       <img class="mainimg" src="images/doinginteractivity.jpg" height=400 onclick='showOnly("interactive")'>
     </div>
     <div class="spinner1" id="aboutus" onclick='showOnly("aboutus")'>
-         <p>Sridhar Sundaram<br/>
-         Co-founder. Formely worked at Google, Lotus Interworks and co-founded MindsEye. Ph.D at
-         Cornell.  
-        
-        <p>Rishi Chandra<br/>
-        Co-founder. Earlier co-founded eTech (of eBookers), CommerciaMystica, produced award-winning film, worked at 
-          Intersolutions.
-          
-        <p><a href="mailto:info@mazalearn.com">info@mazalearn.com</a>
+       <img class="mainimg" src="images/AboutUs.jpg" height=400 onclick='showOnly("aboutus")'>
     </div>
     <div class="spinner1" id="learningcycle">
-       <img src="images/learningcycle.jpg" height=400 onclick='showOnly("learningcycle")'>
+       <img class="mainimg" src="images/learningcycle.jpg" height=400 onclick='showOnly("learningcycle")'>
     </div>
     <div class="spinner1" id="enquiry">
-       <img src="images/doubtenquiry.jpg" height=400 onclick='showOnly("enquiry")'>
+       <img class="mainimg" src="images/doubtenquiry.jpg" height=400 onclick='showOnly("enquiry")'>
     </div>
     <div id="presentation" style="visibility:hidden">
-      <a target="_blank" href="https://docs.google.com/presentation/pub?id=1qgECsnAzmzL0-g25EQs2oV7AQE5xeLU-6Z7Q3wXXYHY&start=false&loop=false&delayms=3000">
-        <h2 align="center">Science Education and Science Engine</h3>
-      </a>
+  <div id="submenu">
+    <div class="cont3">
+      <div class="spinner" id="spin1">
+        <div class="face1" onclick="showPresentation();">Presentation</div>
+        <div class="face2" onclick="showDemo();">Demo</div>
+        <div class="face3" onclick="showPresentation(); ">Presentation</div>
+        <div class="face4" onclick="showDeno();">Demo</div>
+        <div class="face5" onclick="showPresentation(); ">Presentation</div>
+        <div class="face6" onclick="showDemo();">Demo</div>
+      </div>
+    </div>
     </div>
     <div id="cssanimationsupport">
     </div>

@@ -21,6 +21,11 @@ handlers:
   upload: static/favicon.ico
   mime_type: image/x-icon
 
+- url: /science/demo
+  static_files: static/ncert-science-electromagnetism.pdf
+  upload: static/ncert-science-electromagnetism.pdf
+  mime_type: application/pdf
+  
 - url: /(.*)
   static_files: static/\1
   upload: static/(.*)
