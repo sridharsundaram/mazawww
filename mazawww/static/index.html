@@ -1,19 +1,27 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Maza Learn</title>
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 <style type="text/css">
 
   div.spinner1 {
     position: absolute;
+    top:50%;
+    left:50%;
+    margin-top: -250px;
+    margin-left: -275px;
     width: 320px;
     height: 220px;
     border: 1px solid #ccc;
-    background: rgba(100,100,100,0.8);
+    background: rgba(0,100, 255,0.8);
     text-align: center;
     line-height: 16px;
     font-size: 16px;
     color:rgb(255,255,255);
     -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    -ms-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
     visibility: hidden;
   }
 
@@ -22,27 +30,80 @@
     width: 120px;
     height: 120px;
     border: 1px solid #ccc;
-    background: rgba(255,255,255,0.8);
+    background: rgba(150,200,100,0.8);
     text-align: center;
     line-height: 120px;
     font-size: 20px;
     -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    -ms-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
   }
 
-  .spinner .face1 { -webkit-transform: translateZ(60px);                                }
-  .spinner .face2 { -webkit-transform: rotateY(90deg) translateZ(60px);                 }
-  .spinner .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);  }
-  .spinner .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px); }
-  .spinner .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px); }
-  .spinner .face6 { -webkit-transform: rotateX(-90deg) translateZ(60px);                }
+  .spinner .face1 { -webkit-transform: translateZ(60px); 
+                    -moz-transform: translateZ(60px);
+                    -ms-transform: translateZ(60px);
+                  }
+  .spinner .face2 { -webkit-transform: rotateY(90deg) translateZ(60px);
+                    -moz-transform: rotateY(90deg) translateZ(60px);
+                    -ms-transform: translateZ(60px);
+                  }
+  .spinner .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+                    -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
+                    -ms-transform: translateZ(60px);
+                  }
+  .spinner .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+                    -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
+                    -ms-transform: translateZ(60px);
+                  }
+  .spinner .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+                    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
+                    -ms-transform: translateZ(60px);
+                  }
+  .spinner .face6 { -webkit-transform: rotateX(-90deg) translateZ(60px);
+                    -moz-transform: rotateX(-90deg) translateZ(60px);
+                    -ms-transform: translateZ(60px);
+                  }
 
   @-webkit-keyframes spincube {
     from,to  {                                                    }
-    16%      { -webkit-transform: rotateY(-90deg);                }
-    33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg); }
-    50%      { -webkit-transform: rotateY(180deg) rotateZ(90deg); }
-    66%      { -webkit-transform: rotateY(90deg) rotateX(90deg);  }
-    83%      { -webkit-transform: rotateX(90deg);                 }
+    16%      { -webkit-transform: rotateY(-90deg);
+             }
+    33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);
+             }
+    50%      { -webkit-transform: rotateY(180deg) rotateZ(90deg);
+             }
+    66%      { -webkit-transform: rotateY(90deg) rotateX(90deg);
+             }
+    83%      { -webkit-transform: rotateX(90deg);
+             }
+  }
+
+  @-moz-keyframes spincube {
+    from,to  {                                                    }
+    16%      { -moz-transform: rotateY(-90deg);
+             }
+    33%      { -moz-transform: rotateY(-90deg) rotateZ(90deg);
+             }
+    50%      { -moz-transform: rotateY(180deg) rotateZ(90deg);
+             }
+    66%      { -moz-transform: rotateY(90deg) rotateX(90deg);
+             }
+    83%      { -moz-transform: rotateX(90deg);
+             }
+  }
+
+  @-ms-keyframes spincube {
+    from,to  {                                                    }
+    16%      { -ms-transform: rotateY(-90deg);
+             }
+    33%      { -ms-transform: rotateY(-90deg) rotateZ(90deg);
+             }
+    50%      { -ms-transform: rotateY(180deg) rotateZ(90deg);
+             }
+    66%      { -ms-transform: rotateY(90deg) rotateX(90deg);
+             }
+    83%      { -ms-transform: rotateX(90deg);
+             }
   }
 
   .spinner {
@@ -52,9 +113,25 @@
     -webkit-animation-duration: 22s;
     -webkit-transform-style: preserve-3d;
     -webkit-transform-origin: 60px 60px 0;
+    
+    -moz-animation-name: spincube;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-duration: 22s;
+    -moz-transform-style: preserve-3d;
+    -moz-transform-origin: 60px 60px 0;
+    
+    -ms-animation-name: spincube;
+    -ms-animation-timing-function: ease-in-out;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-duration: 22s;
+    -ms-transform-style: preserve-3d;
+    -ms-transform-origin: 60px 60px 0;
   }
  .spinner:hover { 
     -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
   }
 
 div.hidden {visibility:hidden;}
@@ -81,72 +158,65 @@ div.cont3
 </style>
 <script type="text/javascript">
   function showOnly(id) {
-    var menu = ['aboutus', 'mazaisfun', 'contactus', 'monkeymath'];
+    var menu = ['aboutus', 'enquiry', 'learningcycle', 'interactive', 'medium', 'scienceengine'];
+    var presentation = document.getElementById('presentation');
     for (var i = 0; i < menu.length; i++) {
       var elem = document.getElementById(menu[i]);
       if (menu[i] != id) {
         elem.style.visibility = 'hidden';
-      } else {
-        elem.style.visibility = 
-            (elem.style.visibility != 'visible') ? 'visible' : 'hidden';
+      } else if (elem.style.visibility != 'visible') {
+        elem.style.visibility = 'visible';
+        presentation.style.visibility = 'visible';
+      } else if (elem.style.visibility == 'visible') {
+        elem.style.visibility = 'hidden';
+        presentation.style.visibility = 'hidden';
       }
     }
 	}
 </script>
 </head>
-<body>
+<body style="background-color: rgba(50,150,200,0.5)">
+<h1 align="center">Maza Learn</h1>
 <table cellpadding="2"  width = "100%">
 <tr>
 <td width="33%" height="200" align="left" valign = "top">
-    <div class="spinner1" id="monkeymath">
-        <div>
-          <p> Monkey Math is a series of games to make math intuitive.
-          <p>LCM is the Least Common Multiple and HCF is the Highest Common Factor. 
-          <p>Many children find these two concepts confusing and are not sure 
-          when to use what in real life and test problems. 
-          <p>This game develops intution about LCM and HCF.
-        </div>
-    </div>
 </td>
-<td width="33%" height="200" align="left" valign = "top"></td>
+
 <td width="33%" height="200" align="left" valign = "top">
-    <div class="spinner1" id="mazaisfun">
-       <p>We want to make learning fun and accessible.
-       <p>Paraphrasing Confucius - 
-       <blockquote>I hear, I forget. <br>I see, I remember.<br>I do, I understand</blockquote>
-       <p>We create fun games that provide intuition into concepts. 
-    </div>
+</td>
+<td width="33%" height="200" align="left" valign = "top">
 </td>
 </tr>
 <tr>
-<td width="33%" height="200" align="center" valign = "top"></td>
+<td width="33%" height="200" align="center" valign = "top">
+</td>
 <td width="33%" height="200" align="center" valign = "top">
     <div class="cont3">
-      <div class="spinner">
+      <div class="spinner" id="spin1">
         <div class="face1" onclick="showOnly('aboutus');">About Us</div>
-        <div class="face2" onclick="showOnly('mazaisfun');">Learning = Fun</div>
-        <div class="face3" onclick="showOnly('contactus'); ">Contact Us</div>
-        <div class="face4" onclick="showOnly('mazaisfun');">Learning = Fun</div>
-        <div class="face5" onclick="showOnly('monkeymath'); ">Monkey Math</div>
-        <div class="face6" onclick="showOnly('mazaisfun');">learning = Fun</div>
+        <div class="face2" onclick="showOnly('interactive');">Interactive</div>
+        <div class="face3" onclick="showOnly('medium'); ">The Medium</div>
+        <div class="face4" onclick="showOnly('enquiry');">Enquiry</div>
+        <div class="face5" onclick="showOnly('scienceengine'); ">ScienceEngine</div>
+        <div class="face6" onclick="showOnly('learningcycle');">Learning Fun</div>
       </div>
       <div class="cont1">
         <div class="spinner">
-          <div class="face1" onclick="showOnly('mazaisfun');">Learning = Fun</div>
-          <div class="face2" onclick="showOnly('contactus'); ">Contact Us</div>
-          <div class="face3" onclick="showOnly('mazaisfun');">Learning = Fun</div>
-          <div class="face4" onclick="showOnly('monkeymath'); ">Monkey Math</div>
-          <div class="face5" onclick="showOnly('mazaisfun');">Learning = Fun</div>
+          <div class="face1" onclick="showOnly('learningcycle');">Learning Fun</div>
+          <div class="face2" onclick="showOnly('medium'); ">The Medium</div>
+          <div class="face3" onclick="showOnly('interactive');">Interactive</div>
+          <div class="face4" onclick="showOnly('scienceengine'); ">ScienceEngine</div>
+          <div class="face5" onclick="showOnly('enquiry');">Enquiry</div>
           <div class="face6" onclick="showOnly('aboutus'); ">About Us</div>
         </div>
         <div class="cont1">
           <div class="spinner">
-            <div class="face1" onclick="showOnly('contactus'); ">Contact Us</div>
-            <div class="face2" onclick="showOnly('mazaisfun');">Learning = Fun</div>
-            <div class="face3" onclick="showOnly('monkeymath'); ">Monkey Math</div>
-            <div class="face4" onclick="showOnly('mazaisfun');">Learning = Fun</div>
+            <div class="face1" onclick="showOnly('medium'); ">The Medium</div>
+            <div class="face2" onclick="showOnly('learningcycle');">Learning Fun</div>
+            <div class="face3" onclick="showOnly('scienceengine'); ">ScienceEngine</div>
+            <div class="face4" onclick="showOnly('interactive');">Interactive</div>
             <div class="face5" onclick="showOnly('aboutus'); ">About Us</div>
-            <div class="face6" onclick="showOnly('mazaisfun');">Maza is Fun</div>
+            <div class="face6" onclick="showOnly('enquiry');">Enquiry</div>
           </div>
         </div>
       </div>
@@ -156,24 +226,69 @@ div.cont3
 </tr>
 <tr>
 <td width="33%" height="200" align="center" valign = "top">
-    <div class="spinner1" id="aboutus">
-         <p>Sridhar Sundaram<br/>
-         Co-founder. Formely worked at Google, Lotus Interworks and co-founded MindsEye. Ph.D at
-         Cornell. Goal - to make learning fun and easily accessible.  
-        
-        <p>Rishi Chandra<br/>
-        Co-founder. Earlier co-founded eTech (of eBookers), CommerciaMystica, produced award-winning film, worked at 
-          Intersolutions. Goal - Make learning accessible to anyone with the drive.
-    </div>
-<td width="33%" height="200" align="center" valign = "top"></td>
+</td>
 <td width="33%" height="200" align="center" valign = "top">
-    <div class="spinner1" id="contactus">
-        <div>
-        <br /><br /><br />Sridhar Sundaram <br /> sridhar.sundaram@mazalearn.com
-        <br /><br /><br /><br /> Rishi Chandra  <br />rishi.chandra@mazalearn.com</div>
-    </div>
+</td>
+<td width="33%" height="200" align="center" valign = "top">
 </td>
 </tr>
 </table>
+    <div class="spinner1" id="scienceengine">
+       <img src="images/scienceengine.jpg" height=400 onclick='showOnly("scienceengine")'>
+    </div>
+    <div class="spinner1" id="medium">
+       <img src="images/medium.jpg" height=400>
+    </div>
+    <div class="spinner1" id="interactive">
+       <img src="images/doinginteractivity.jpg" height=400 onclick='showOnly("interactive")'>
+    </div>
+    <div class="spinner1" id="aboutus" onclick='showOnly("aboutus")'>
+         <p>Sridhar Sundaram<br/>
+         Co-founder. Formely worked at Google, Lotus Interworks and co-founded MindsEye. Ph.D at
+         Cornell.  
+        
+        <p>Rishi Chandra<br/>
+        Co-founder. Earlier co-founded eTech (of eBookers), CommerciaMystica, produced award-winning film, worked at 
+          Intersolutions.
+          
+        <p><a href="mailto:info@mazalearn.com">info@mazalearn.com</a>
+    </div>
+    <div class="spinner1" id="learningcycle">
+       <img src="images/learningcycle.jpg" height=400 onclick='showOnly("learningcycle")'>
+    </div>
+    <div class="spinner1" id="enquiry">
+       <img src="images/doubtenquiry.jpg" height=400 onclick='showOnly("enquiry")'>
+    </div>
+    <div id="presentation" style="visibility:hidden">
+      <a target="_blank" href="https://docs.google.com/presentation/pub?id=1qgECsnAzmzL0-g25EQs2oV7AQE5xeLU-6Z7Q3wXXYHY&start=false&loop=false&delayms=3000">
+        <h2 align="center">Science Education and Science Engine</h3>
+      </a>
+    </div>
+    <div id="cssanimationsupport">
+    </div>
+    <script src="javascript/modernizr-latest.js"></script>
+    <script src="javascript/transitionsHelper.js"></script>
+    <script src="javascript/animationsHelper.js"></script>
+    <script src="javascript/jsfallback-master.js"></script>
+    <script>
+        var supportElement = document.getElementById("cssanimationsupport");
+        // Checking if CSS3 animations is supported
+        if (!Modernizr.cssanimations) {
+            // checking if getElementsByClassName is supported
+            if (document.getElementsByClassName) {
+                // if so, we can use our JS fallback library
+                supportElement.innerHTML = "CSS3 Animations <strong>are not supported</strong> by your browser, using fallback. Please use Chrome, Firefox or IE10.";
+                LoadJSAnimationsFallback();
+            }
+            else {
+                supportElement.innerHTML = "CSS3 Animations <strong>are not supported</strong> by your browser. Please use Chrome, Firefox or IE10";
+            }
+        }
+        else {
+            // if CSS3 animation is supported, we have nothing to do. 
+            // The *master.css stylesheets will be automatically applied & used.
+            supportElement.innerHTML = "";
+        }
+    </script>
 </body>
 </html>
