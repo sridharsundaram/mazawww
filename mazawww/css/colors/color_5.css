@@ -1,0 +1,880 @@
+
+/*************************** COMMON ***************************/
+
+/* Header, Footer, Frame Color */
+body,
+.l-header,
+.l-footer,
+.l-subheader .w-nav-list,
+.w-sections.nav_aside .w-sections-item-icon,
+.w-sections.nav_aside .w-sections-item-title {
+	background-color: #333;
+	}
+	
+/* Logo Text Color */
+.w-logo-title {
+	color: #ccc;
+	}
+	
+/* Navigation Color */
+.l-subheader .w-nav-control i,
+.l-subheader .w-nav-anchor.level_1,
+.w-sections.nav_aside .w-sections-item-icon {
+	color: #999;
+	}
+	
+/* Navigation Hover Color */
+.l-subheader .w-nav-item.level_1:hover .w-nav-anchor.level_1,
+.w-sections.nav_aside .w-sections-item:hover .w-sections-item-icon,
+.w-sections.nav_aside .w-sections-item-title {
+	color: #ccc;
+	}
+	
+/* Navigation Active Color */
+.l-subheader .w-nav-item.level_1.active .w-nav-anchor.level_1,
+.l-subheader .w-nav-item.level_1.current-menu-item .w-nav-anchor.level_1,
+.l-subheader .w-nav-item.level_1.current-menu-ancestor .w-nav-anchor.level_1,
+.l-subheader .w-nav-item.level_1.clicked .w-nav-anchor.level_1,
+.w-sections.nav_aside .w-sections-item.active .w-sections-item-icon {
+	color: #ff711f;
+	}
+	
+/* Copyright & Socials Color */
+.w-copyright,
+.w-socials-item-link {
+	color: #999;
+	}
+
+/* Blog Date Background Color */
+.w-blog.imgpos_atleft .w-blog-entry-meta-date {
+	background-color: #444;
+	}
+	
+/* Blog Date Text Color */
+.w-blog.imgpos_atleft .w-blog-entry-meta-date {
+	color: #fff;
+	}
+
+/* Cart Background Color */
+.w-cart {
+	background-color: #2a2a2a;
+	}
+	
+/* Cart Icon Color */
+.w-cart-meta-title-icon {
+	color: #ff711f;
+	}
+	
+/* Cart Empty Icon Color */
+.w-cart.status_empty .w-cart-meta-title-icon {
+	color: #999;
+	}
+
+/* Cart Text Color */
+.w-cart-meta-title-text,
+.w-cart-meta-description {
+	color: #999;
+	}
+	
+/* Cart Info Text Color */
+.w-cart-meta-goods-qty,
+.w-cart-meta-goods-total,
+.w-cart-meta-button {
+	color: #fff;
+	}
+
+/* Cart Info Hover Text Color */
+.w-cart-meta:hover .w-cart-meta-goods-total,
+.w-cart-meta:hover .w-cart-meta-button {
+	color: #ff711f;
+	}
+
+/* Cart Button Background Color */
+.w-cart .g-btn.type_color {
+	background-color: #ff711f;
+	}
+
+/* Cart Button Text Color */
+.w-cart .g-btn.type_color {
+	color: #fff;
+	}
+
+/* Cart Button Hover Background Color */
+.w-cart .g-btn.type_color:after {
+	background-color: #fff;
+	}
+
+/* Cart Button Hover Text Color */
+.w-cart .g-btn.type_color:hover {
+	color: #ff711f;
+	}
+
+/* Catalog Meta Background Color */
+.w-catalog-item-meta {
+	background-color: #9ebf45;
+	}
+	
+/* Catalog Meta Text Color */
+.w-catalog-item-meta {
+	color: #fff;
+	}
+	
+/* Comment & Contact Icon Background Color */
+.g-pagination-item.active,
+.w-comments-item-icon,
+.w-contacts-item i {
+	background-color: #444;
+	}
+
+/* Comment & Contact Icon Text Color */
+.w-comments-item-icon,
+.w-contacts-item i {
+	color: #ccc;
+	}
+
+/* Form Input Background Color */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+	background-color: #444;
+	}
+	
+/* Form Input Text Color */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+	color: #fff;
+	}
+
+/* Form Input Icon Color */
+.w-form .g-form-row-field i {
+	color: #999;
+	}
+
+/* Form Input Active Background Color */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+	background-color: #fff;
+	}
+
+/* Form Input Active Text Color */
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+	color: #333;
+	}
+	
+/* Hover Elements Background Color */
+.w-blog.imgpos_atleft .w-blog-entry-preview-hover:before,
+.w-catalog-item-image-link-hover:before,
+.w-gallery-tnail-hover:before,
+.w-portfolio-item-hover:before {
+	background-color: #ff711f;
+	}
+	
+/* Hover Elements Icon Color */
+.w-blog.imgpos_atleft .w-blog-entry-preview-hover i,
+.w-catalog-item-image-link-hover i,
+.w-gallery-tnail-hover i,
+.w-portfolio-item-hover i {
+	color: #fff;
+	}
+
+/* IconBox Circle Background Color */
+.w-iconbox-icon,
+.w-iconbox.type_circle {
+	background-color: #ff711f;
+	}
+
+/* IconBox Circle Title Color */
+.w-iconbox.type_circle .w-iconbox-text {
+	color: #fff;
+	}
+
+/* IconBox Circle Text Color */
+.w-iconbox.type_circle .w-iconbox-text p {
+	color: #fff;
+	}
+
+/* Offer Background Color */
+.w-offer-content {
+	background-color: #444;
+	}
+	
+/* Offer Title Color */
+.g-html .w-offer-content-text h4 {
+	color: #fff;
+	}
+	
+/* Offer Description Text Color */
+.g-html .w-offer-content-text p {
+	color: #ccc;
+	}
+
+/* Offer Timer Background Color */
+.w-offer-ending {
+	background-color: #333;
+	}
+	
+/* Offer Timer Text Color */
+.w-offer-ending {
+	color: #fff;
+	}
+
+/* Offer Timer Number Color */
+.w-offer-ending-timer-section-value {
+	color: #ff711f;
+	}
+	
+/* Offer Timer Meta Text Color */
+.w-offer-ending-timer-section-text {
+	color: #999;
+	}
+	
+/* Sections Tab Background Color */
+.w-sections-list {
+	background-color: #2a2a2a;
+	}
+.w-sections-item:after {
+	border-top-color: #2a2a2a;
+	}
+	
+/* Sections Tab Text Color */
+.w-sections-item {
+	color: #999;
+	}
+
+/* Sections Tab Hover Text Color */
+.w-sections-item:hover {
+	color: #fff;
+	}
+
+/* Sections Tab Active Text Color */
+.w-sections-item.active {
+	color: #ff711f;
+	}
+
+/* Slide Description Background Color */
+.w-slider-item-link-content {
+	background-color: #333;
+	}
+
+/* Slide Description Text Color */
+.w-slider-item-link-content {
+	color: #fff;
+	}
+
+/* Slide Description Link Color */
+.w-slider-item-link-content-more {
+	color: #ff711f;
+	}
+	
+/* Team Member Links Background Color */
+.w-team.type_carousel .w-team-member-links {
+	background-color: #ff711f;
+	}
+
+/* Team Member Links Icon Color */
+.g-html a.w-team-member-links-item {
+	color: #333;
+	}
+	
+/* Team Member Links Icon Hover Color */
+.g-html a.w-team-member-links-item:hover {
+	color: #fff;
+	}
+
+/* Testimonials Background Color */
+.w-testimonials-item-text,
+.g-html blockquote {
+	background-color: #444;
+	}
+.w-testimonials-item-person:after {
+	border-top-color: #444;
+	}
+	
+/* Testimonials Text Color */
+.w-testimonials-item-text,
+.g-html blockquote {
+	color: #fff;
+	}
+
+
+/*************************** COLOR STYLE: 1 ***************************/
+
+/* Page Background Color */
+.l-submain,
+.colorstyle_2 .w-pricing-item-title,
+.colorstyle_2 .w-block-header {
+	background-color: #333;
+	}
+.w-portfolio-item-anchor:after {
+	border-bottom-color: #333;
+	}
+
+/* Separator Color */
+.g-html h1.type_lined:before,
+.g-html h1.type_lined:after,
+.g-html h2.type_lined:before,
+.g-html h2.type_lined:after,
+.g-html h3.type_lined:before,
+.g-html h3.type_lined:after,
+.g-html h4.type_lined:before,
+.g-html h4.type_lined:after,
+.g-html h5.type_lined:before,
+.g-html h5.type_lined:after,
+.g-html h6.type_lined:before,
+.g-html h6.type_lined:after,
+.hr {
+	background-color: #444;
+	}
+.w-comments,
+.w-pricing-item-h,
+#wp-calendar thead th,
+#wp-calendar tbody td,
+#wp-calendar tfoot td {
+	border-color: #444;
+	}
+.w-team.type_carousel .w-team-member-image {
+	box-shadow: 0 0 0 10px #444;
+	}
+
+/* Title Color */
+.l-submain,
+.w-iconbox-text,
+.colorstyle_2 .w-pricing-item-title,
+.colorstyle_2 .w-block-header {
+	color: #fff;
+	}
+
+/* Link Color */
+a,
+.g-html ul.for_steps li i,
+.w-blog.imgpos_atleft .w-blog-entry-meta-comments a,
+.w-catalog-item-title,
+.w-team-member-name,
+.w-testimonials-item-person-name {
+	color: #ff711f;
+	}
+.w-link:hover .w-link-anchor img {
+	box-shadow: 0 0 0 5px #ff711f;
+	}
+	
+/* Link Hover Color */
+a:hover,
+a:active,
+.w-blog.imgpos_atleft .w-blog-entry-meta-comments a:hover {
+	color: #fff;
+	}
+	
+/* Text Color */
+.g-html p,
+.g-html ul,
+.g-html ol,
+.g-form-row-label,
+.w-blogpost-meta,
+.w-comments-item-text,
+.w-link-anchor-text,
+.w-testimonials-item-person i,
+.w-testimonials-item-person-meta,
+.widget.widget_rss ul li div {
+	color: #ccc;
+	}
+	
+/* Faded Elements Color */
+.g-html ul.for_links li > a i,
+.w-blogpost-meta i,
+.w-comments-title i,
+.w-comments-item-date,
+.w-link-anchor-title i,
+#wp-calendar thead th,
+.widget.widget_rss .widgettitle a:before,
+.widget.widget_rss ul li span,
+.widget.widget_rss ul li cite,
+.widget.widget_recent_entries ul li span {
+	color: #888;
+	}
+
+/* Default Button Background Color */
+.g-btn {
+	background-color: #d9d9d9;
+	}
+	
+/* Default Button Text Color */
+.g-btn {
+	color: #333;
+	}
+
+/* Default Button Hover Background Color */
+.no-touch .g-btn:after {
+	background-color: #fff;
+	}
+
+/* Default Button Hover Text Color */
+.no-touch .g-btn:hover,
+.no-touch a.g-btn:hover {
+	color: #333;
+	}
+
+/* Colored Button Background Color */
+.g-btn.type_color,
+.w-pricing-item.type_featured .w-pricing-item-title,
+input[type="submit"] {
+	background-color: #ff711f;
+	}
+
+/* Colored Button Text Color */
+.g-btn.type_color,
+.w-pricing-item.type_featured .w-pricing-item-title,
+input[type="submit"] {
+	color: #fff;
+	}
+
+/* Colored Button Hover Background Color */
+.no-touch .g-btn.type_color:after,
+.no-touch input[type="submit"]:hover {
+	background-color: #fff;
+	}
+	
+/* Colored Button Hover Text Color */
+.no-touch .g-btn.type_color:hover,
+.no-touch a.g-btn.type_color:hover,
+.no-touch input[type="submit"]:hover {
+	color: #ff711f;
+	}
+
+/* Dark Button Background Color */
+.g-btn.type_dark {
+	background-color: #444;
+	}
+
+/* Dark Button Text Color */
+.g-btn.type_dark {
+	color: #fff;
+	}
+
+/* Dark Button Hover Background Color */
+.no-touch .g-btn.type_dark:after {
+	background-color: #fff;
+	}
+
+/* Dark Button Hover Text Color */
+.no-touch .g-btn.type_dark:hover,
+.no-touch a.g-btn.type_dark:hover {
+	color: #333;
+	}
+
+/* IconBox Circle Icon Color */
+.w-iconbox-icon,
+.w-iconbox.type_circle:hover .w-iconbox-icon {
+	color: #fff;
+	}
+
+/* IconBox Circle Hover Background Color */
+.w-iconbox:hover .w-iconbox-icon {
+	background-color: #fff;
+	}
+	.w-iconbox-icon:after {
+		box-shadow: 0 0 0 3px #fff;
+		}
+	.w-iconbox.type_bigicon .w-iconbox-icon:after {
+		box-shadow: 0 0 0 5px #fff;
+		}
+
+/* IconBox Circle Hover Icon Color */
+.w-iconbox:hover .w-iconbox-icon {
+	color: #ff711f;
+	}
+
+/* IconBox Large Icon Color */
+.w-iconbox.type_large .w-iconbox-icon {
+	color: #ff711f;
+	}
+
+
+/*************************** COLOR STYLE: 2 ***************************/
+
+/* Page Background Color */
+.colorstyle_2,
+.w-pricing-item-title,
+.w-block-header {
+	background-color: #333;
+	}
+.colorstyle_2 .w-portfolio-item-anchor:after {
+	border-bottom-color: #333;
+	}
+
+/* Separator Color */
+.colorstyle_2 h1.type_lined:before,
+.colorstyle_2 h1.type_lined:after,
+.colorstyle_2 h2.type_lined:before,
+.colorstyle_2 h2.type_lined:after,
+.colorstyle_2 h3.type_lined:before,
+.colorstyle_2 h3.type_lined:after,
+.colorstyle_2 h4.type_lined:before,
+.colorstyle_2 h4.type_lined:after,
+.colorstyle_2 h5.type_lined:before,
+.colorstyle_2 h5.type_lined:after,
+.colorstyle_2 h6.type_lined:before,
+.colorstyle_2 h6.type_lined:after,
+.colorstyle_2 .hr {
+	background-color: #444;
+	}
+.colorstyle_2 .w-comments,
+.colorstyle_2 .w-pricing-item-h,
+.colorstyle_2 #wp-calendar thead th,
+.colorstyle_2 #wp-calendar tbody td,
+.colorstyle_2 #wp-calendar tfoot td {
+	border-color: #444;
+	}
+.colorstyle_2 .w-team.type_carousel .w-team-member-image {
+	box-shadow: 0 0 0 10px #444;
+	}
+
+/* Title Color */
+.colorstyle_2,
+.colorstyle_2 .w-iconbox-text,
+.w-pricing-item-title,
+.w-block-header {
+	color: #fff;
+	}
+
+/* Link Color */
+.colorstyle_2 a,
+.colorstyle_2 ul.for_steps li i,
+.colorstyle_2 .w-blog.imgpos_atleft .w-blog-entry-meta-comments a,
+.colorstyle_2 .w-catalog-item-title,
+.colorstyle_2 .w-team-member-name,
+.colorstyle_2 .w-testimonials-item-person-name {
+	color: #ff711f;
+	}
+.colorstyle_2 .w-link:hover .w-link-anchor img {
+	box-shadow: 0 0 0 5px #ff711f;
+	}
+	
+/* Link Hover Color */
+.colorstyle_2 a:hover,
+.colorstyle_2 a:active,
+.colorstyle_2 .w-blog.imgpos_atleft .w-blog-entry-meta-comments a:hover {
+	color: #fff;
+	}
+	
+/* Text Color */
+.colorstyle_2  p,
+.colorstyle_2  ul,
+.colorstyle_2  ol,
+.colorstyle_2 .g-form-row-label,
+.colorstyle_2 .w-blogpost-meta,
+.colorstyle_2 .w-comments-item-text,
+.colorstyle_2 .w-link-anchor-text,
+.colorstyle_2 .w-testimonials-item-person i,
+.colorstyle_2 .w-testimonials-item-person-meta,
+.colorstyle_2 .widget.widget_rss ul li div {
+	color: #ccc;
+	}
+	
+/* Faded Elements Color */
+.colorstyle_2 ul.for_links li > a i,
+.colorstyle_2 .w-blogpost-meta i,
+.colorstyle_2 .w-comments-title i,
+.colorstyle_2 .w-comments-item-date,
+.colorstyle_2 .w-link-anchor-title i,
+.colorstyle_2 #wp-calendar thead th,
+.colorstyle_2 .widget.widget_rss .widgettitle a:before,
+.colorstyle_2 .widget.widget_rss ul li span,
+.colorstyle_2 .widget.widget_rss ul li cite,
+.colorstyle_2 .widget.widget_recent_entries ul li span {
+	color: #888;
+	}
+
+/* Default Button Background Color */
+.colorstyle_2 .g-btn {
+	background-color: #d9d9d9;
+	}
+	
+/* Default Button Text Color */
+.colorstyle_2 .g-btn {
+	color: #333;
+	}
+
+/* Default Button Hover Background Color */
+.no-touch .colorstyle_2 .g-btn:after {
+	background-color: #fff;
+	}
+
+/* Default Button Hover Text Color */
+.no-touch .colorstyle_2 .g-btn:hover,
+.no-touch .colorstyle_2 a.g-btn:hover {
+	color: #333;
+	}
+
+/* Colored Button Background Color */
+.colorstyle_2 .g-btn.type_color,
+.colorstyle_2 .w-pricing-item.type_featured .w-pricing-item-title,
+.colorstyle_2 input[type="submit"] {
+	background-color: #ff711f;
+	}
+
+/* Colored Button Text Color */
+.colorstyle_2 .g-btn.type_color,
+.colorstyle_2 .w-pricing-item.type_featured .w-pricing-item-title,
+.colorstyle_2 input[type="submit"] {
+	color: #fff;
+	}
+
+/* Colored Button Hover Background Color */
+.no-touch .colorstyle_2 .g-btn.type_color:after,
+.no-touch .colorstyle_2 input[type="submit"]:hover {
+	}
+	
+/* Colored Button Hover Text Color */
+.no-touch .colorstyle_2 .g-btn.type_color:hover,
+.no-touch .colorstyle_2 a.g-btn.type_color:hover,
+.no-touch .colorstyle_2 input[type="submit"]:hover {
+	color: #ff711f;
+	}
+
+/* Dark Button Background Color */
+.colorstyle_2 .g-btn.type_dark {
+	background-color: #444;
+	}
+
+/* Dark Button Text Color */
+.colorstyle_2 .g-btn.type_dark {
+	color: #fff;
+	}
+
+/* Dark Button Hover Background Color */
+.no-touch .colorstyle_2 .g-btn.type_dark:after {
+	background-color: #fff;
+	}
+
+/* Dark Button Hover Text Color */
+.no-touch .colorstyle_2 .g-btn.type_dark:hover,
+.no-touch .colorstyle_2 a.g-btn.type_dark:hover {
+	color: #333;
+	}
+
+/* IconBox Circle Icon Color */
+.colorstyle_2 .w-iconbox-icon,
+.colorstyle_2 .w-iconbox.type_circle:hover .w-iconbox-icon {
+	color: #fff;
+	}
+
+/* IconBox Circle Hover Background Color */
+.colorstyle_2 .w-iconbox:hover .w-iconbox-icon {
+	background-color: #fff;
+	}
+	.colorstyle_2 .w-iconbox-icon:after {
+		box-shadow: 0 0 0 3px #fff;
+		}
+	.colorstyle_2 .w-iconbox.type_bigicon .w-iconbox-icon:after {
+		box-shadow: 0 0 0 5px #fff;
+		}
+
+/* IconBox Circle Hover Icon Color */
+.colorstyle_2 .w-iconbox:hover .w-iconbox-icon {
+	color: #ff711f;
+	}
+
+/* IconBox Large Icon Color */
+.colorstyle_2 .w-iconbox.type_large .w-iconbox-icon {
+	color: #ff711f;
+	}
+
+
+/*************************** COLOR STYLE: 3 ***************************/
+
+/* Page Background Color */
+.colorstyle_3 {
+	background-color: #333;
+	}
+.colorstyle_3 .w-portfolio-item-anchor:after {
+	border-bottom-color: #333;
+	}
+
+/* Separator Color */
+.colorstyle_3 h1.type_lined:before,
+.colorstyle_3 h1.type_lined:after,
+.colorstyle_3 h2.type_lined:before,
+.colorstyle_3 h2.type_lined:after,
+.colorstyle_3 h3.type_lined:before,
+.colorstyle_3 h3.type_lined:after,
+.colorstyle_3 h4.type_lined:before,
+.colorstyle_3 h4.type_lined:after,
+.colorstyle_3 h5.type_lined:before,
+.colorstyle_3 h5.type_lined:after,
+.colorstyle_3 h6.type_lined:before,
+.colorstyle_3 h6.type_lined:after,
+.colorstyle_3 .hr {
+	background-color: #444;
+	}
+.colorstyle_3 .w-comments,
+.colorstyle_3 .w-pricing-item-h,
+.colorstyle_3 #wp-calendar thead th,
+.colorstyle_3 #wp-calendar tbody td,
+.colorstyle_3 #wp-calendar tfoot td {
+	border-color: #444;
+	}
+.colorstyle_3 .w-team.type_carousel .w-team-member-image {
+	box-shadow: 0 0 0 10px #444;
+	}
+
+/* Title Color */
+.colorstyle_3,
+.colorstyle_3 .w-iconbox-text {
+	color: #fff;
+	}
+
+/* Link Color */
+.colorstyle_3 a,
+.colorstyle_3 ul.for_steps li i,
+.colorstyle_3 .w-blog.imgpos_atleft .w-blog-entry-meta-comments a,
+.colorstyle_3 .w-catalog-item-title,
+.colorstyle_3 .w-team-member-name,
+.colorstyle_3 .w-testimonials-item-person-name {
+	color: #ff711f;
+	}
+.colorstyle_3 .w-link:hover .w-link-anchor img {
+	box-shadow: 0 0 0 5px #ff711f;
+	}
+	
+/* Link Hover Color */
+.colorstyle_3 a:hover,
+.colorstyle_3 a:active,
+.colorstyle_3 .w-blog.imgpos_atleft .w-blog-entry-meta-comments a:hover {
+	color: #fff;
+	}
+	
+/* Text Color */
+.colorstyle_3  p,
+.colorstyle_3  ul,
+.colorstyle_3  ol,
+.colorstyle_3 .g-form-row-label,
+.colorstyle_3 .w-blogpost-meta,
+.colorstyle_3 .w-comments-item-text,
+.colorstyle_3 .w-link-anchor-text,
+.colorstyle_3 .w-testimonials-item-person i,
+.colorstyle_3 .w-testimonials-item-person-meta,
+.colorstyle_3 .widget.widget_rss ul li div {
+	color: #ccc;
+	}
+	
+/* Faded Elements Color */
+.colorstyle_3 ul.for_links li > a i,
+.colorstyle_3 .w-blogpost-meta i,
+.colorstyle_3 .w-comments-title i,
+.colorstyle_3 .w-comments-item-date,
+.colorstyle_3 .w-link-anchor-title i,
+.colorstyle_3 #wp-calendar thead th,
+.colorstyle_3 .widget.widget_rss .widgettitle a:before,
+.colorstyle_3 .widget.widget_rss ul li span,
+.colorstyle_3 .widget.widget_rss ul li cite,
+.colorstyle_3 .widget.widget_recent_entries ul li span {
+	color: #888;
+	}
+
+/* Default Button Background Color */
+.colorstyle_3 .g-btn {
+	background-color: #d9d9d9;
+	}
+	
+/* Default Button Text Color */
+.colorstyle_3 .g-btn {
+	color: #333;
+	}
+
+/* Default Button Hover Background Color */
+.no-touch .colorstyle_3 .g-btn:after {
+	background-color: #fff;
+	}
+
+/* Default Button Hover Text Color */
+.no-touch .colorstyle_3 .g-btn:hover,
+.no-touch .colorstyle_3 a.g-btn:hover {
+	color: #333;
+	}
+
+/* Colored Button Background Color */
+.colorstyle_3 .g-btn.type_color,
+.colorstyle_3 .w-pricing-item.type_featured .w-pricing-item-title,
+.colorstyle_3 input[type="submit"] {
+	background-color: #ff711f;
+	}
+
+/* Colored Button Text Color */
+.colorstyle_3 .g-btn.type_color,
+.colorstyle_3 .w-pricing-item.type_featured .w-pricing-item-title,
+.colorstyle_3 input[type="submit"] {
+	color: #fff;
+	}
+
+/* Colored Button Hover Background Color */
+.no-touch .colorstyle_3 .g-btn.type_color:after,
+.no-touch .colorstyle_3 input[type="submit"]:hover {
+	background-color: #fff;
+	}
+	
+/* Colored Button Hover Text Color */
+.no-touch .colorstyle_3 .g-btn.type_color:hover,
+.no-touch .colorstyle_3 a.g-btn.type_color:hover,
+.no-touch .colorstyle_3 input[type="submit"]:hover {
+	color: #ff711f;
+	}
+
+/* Dark Button Background Color */
+.colorstyle_3 .g-btn.type_dark {
+	background-color: #444;
+	}
+
+/* Dark Button Text Color */
+.colorstyle_3 .g-btn.type_dark {
+	color: #fff;
+	}
+
+/* Dark Button Hover Background Color */
+.no-touch .colorstyle_3 .g-btn.type_dark:after {
+	background-color: #fff;
+	}
+
+/* Dark Button Hover Text Color */
+.no-touch .colorstyle_3 .g-btn.type_dark:hover,
+.no-touch .colorstyle_3 a.g-btn.type_dark:hover {
+	color: #333;
+	}
+
+/* IconBox Circle Icon Color */
+.colorstyle_3 .w-iconbox-icon,
+.colorstyle_3 .w-iconbox.type_circle:hover .w-iconbox-icon {
+	color: #fff;
+	}
+
+/* IconBox Circle Hover Background Color */
+.colorstyle_3 .w-iconbox:hover .w-iconbox-icon {
+	background-color: #fff;
+	}
+	.colorstyle_3 .w-iconbox-icon:after {
+		box-shadow: 0 0 0 3px #fff;
+		}
+	.colorstyle_3 .w-iconbox.type_bigicon .w-iconbox-icon:after {
+		box-shadow: 0 0 0 5px #fff;
+		}
+
+/* IconBox Circle Hover Icon Color */
+.colorstyle_3 .w-iconbox:hover .w-iconbox-icon {
+	color: #ff711f;
+	}
+
+/* IconBox Large Icon Color */
+.colorstyle_3 .w-iconbox.type_large .w-iconbox-icon {
+	color: #ff711f;
+	}
