@@ -1,297 +1,739 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en-US">
 <head>
-<title>Maza Learn</title>
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-<style type="text/css">
+	<meta charset="UTF-8">
+	<title>Maza Learn</title>
 
-  #mainmenu {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: 100px;
-    margin-left: 150px;
-  }
-  #submenu {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    margin-top: 200px;
-    margin-left: -250px;
-  }
-  div.spinner1 {
-    position: absolute;
-    top:50%;
-    left:50%;
-    margin-top: -350px;
-    margin-left: -425px;
-    text-align: center;
-    line-height: 16px;
-    font-size: 16px;
-    color:rgb(255,255,255);
-    -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
-    -moz-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
-    -ms-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
-    visibility: hidden;
-  }
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  .spinner div {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border: 1px solid #ccc;
-    background: rgba(150,200,100,0.8);
-    text-align: center;
-    line-height: 120px;
-    font-size: 20px;
-    -webkit-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
-    -moz-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
-    -ms-box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
-  }
-
-  .spinner .face1 { -webkit-transform: translateZ(60px); 
-                    -moz-transform: translateZ(60px);
-                    -ms-transform: translateZ(60px);
-                  }
-  .spinner .face2 { -webkit-transform: rotateY(90deg) translateZ(60px);
-                    -moz-transform: rotateY(90deg) translateZ(60px);
-                    -ms-transform: translateZ(60px);
-                  }
-  .spinner .face3 { -webkit-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
-                    -moz-transform: rotateY(90deg) rotateX(90deg) translateZ(60px);
-                    -ms-transform: translateZ(60px);
-                  }
-  .spinner .face4 { -webkit-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
-                    -moz-transform: rotateY(180deg) rotateZ(90deg) translateZ(60px);
-                    -ms-transform: translateZ(60px);
-                  }
-  .spinner .face5 { -webkit-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
-                    -moz-transform: rotateY(-90deg) rotateZ(90deg) translateZ(60px);
-                    -ms-transform: translateZ(60px);
-                  }
-  .spinner .face6 { -webkit-transform: rotateX(-90deg) translateZ(60px);
-                    -moz-transform: rotateX(-90deg) translateZ(60px);
-                    -ms-transform: translateZ(60px);
-                  }
-
-  @-webkit-keyframes spincube {
-    from,to  {                                                    }
-    16%      { -webkit-transform: rotateY(-90deg);
-             }
-    33%      { -webkit-transform: rotateY(-90deg) rotateZ(90deg);
-             }
-    50%      { -webkit-transform: rotateY(180deg) rotateZ(90deg);
-             }
-    66%      { -webkit-transform: rotateY(90deg) rotateX(90deg);
-             }
-    83%      { -webkit-transform: rotateX(90deg);
-             }
-  }
-
-  @-moz-keyframes spincube {
-    from,to  {                                                    }
-    16%      { -moz-transform: rotateY(-90deg);
-             }
-    33%      { -moz-transform: rotateY(-90deg) rotateZ(90deg);
-             }
-    50%      { -moz-transform: rotateY(180deg) rotateZ(90deg);
-             }
-    66%      { -moz-transform: rotateY(90deg) rotateX(90deg);
-             }
-    83%      { -moz-transform: rotateX(90deg);
-             }
-  }
-
-  @-ms-keyframes spincube {
-    from,to  {                                                    }
-    16%      { -ms-transform: rotateY(-90deg);
-             }
-    33%      { -ms-transform: rotateY(-90deg) rotateZ(90deg);
-             }
-    50%      { -ms-transform: rotateY(180deg) rotateZ(90deg);
-             }
-    66%      { -ms-transform: rotateY(90deg) rotateX(90deg);
-             }
-    83%      { -ms-transform: rotateX(90deg);
-             }
-  }
-
-  .spinner {
-    -webkit-animation-name: spincube;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 22s;
-    -webkit-transform-style: preserve-3d;
-    -webkit-transform-origin: 60px 60px 0;
-    
-    -moz-animation-name: spincube;
-    -moz-animation-timing-function: ease-in-out;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-duration: 22s;
-    -moz-transform-style: preserve-3d;
-    -moz-transform-origin: 60px 60px 0;
-    
-    -ms-animation-name: spincube;
-    -ms-animation-timing-function: ease-in-out;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-duration: 22s;
-    -ms-transform-style: preserve-3d;
-    -ms-transform-origin: 60px 60px 0;
-  }
- .spinner:hover { 
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    -ms-animation-play-state: paused;
-  }
-
-div.hidden {visibility:hidden;}
-
-.mainimg {
-    opacity:0.7;
-    filter:alpha(opacity=70);
-    height: 400px;
-}
-
-div.cont1
-{
-	width:120px;
-	height:120px;
-	position:absolute;
-	left:25%;
-	top:25%;
-	margin:-100px 0 0 -150px;
-}
-div.cont3
-{
-	width:120px;
-	height:120px;
-	position:absolute;
-	left:60%;
-	top:60%;
-	margin:-100px 0 0 -150px;
-}
-
-</style>
-<script type="text/javascript">
-  function showOnly(id) {
-    var menu = ['aboutus', 'enquiry', 'learningcycle', 'interactive', 'medium', 'scienceengine'];
-    var presentation = document.getElementById('presentation');
-    for (var i = 0; i < menu.length; i++) {
-      var elem = document.getElementById(menu[i]);
-      if (menu[i] != id) {
-        elem.style.visibility = 'hidden';
-      } else if (elem.style.visibility != 'visible') {
-        elem.style.visibility = 'visible';
-        presentation.style.visibility = 'visible';
-      } else if (elem.style.visibility == 'visible') {
-        elem.style.visibility = 'hidden';
-        presentation.style.visibility = 'hidden';
-      }
-    }
-	}
+	<link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,300,700">
 	
-	function showPresentation() {
-	   var link = "https://docs.google.com/presentation/pub?id=1qgECsnAzmzL0-g25EQs2oV7AQE5xeLU-6Z7Q3wXXYHY&start=false&loop=false&delayms=3000";
-	   window.open(link, "_blank");
-	}
+	<link rel="stylesheet" type="text/css" media="all" href="css/motioncss.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/motioncss-widgets.css">
 	
-	function showDemo() {
-	  var link = "science/demo";
-	  window.open(link, "_blank");
-	}
-</script>
+	<link rel="stylesheet" type="text/css" media="all" href="css/icons.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/magnific-popup.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/jquery.jgrowl.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" media="all" href="css/colors/color_5.css">
+
+	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="js/jquery.isotope.js"></script>
+	<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
+	<script type="text/javascript" src="js/jquery.jgrowl.js"></script>
+	<script type="text/javascript" src="js/jquery.smoothScroll.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/jquery.carousello.js"></script>
+	<script type="text/javascript" src="js/plugins.js"></script>
+	<script type="text/javascript" src="js/responsive.js"></script>
+	<script type="text/javascript" src="js/store.js"></script>
+  <script type="text/javascript" src="js/portfolio.js"></script>
+
 </head>
-<body style="background-color: rgba(50,150,200,0.5)">
-<!-- <body background="images/splash.jpg"> -->
-<h1 align="center">Maza Learn</h1>
-  <div id="mainmenu">
-    <div class="cont3">
-      <div class="spinner" id="spin1">
-        <div class="face1" onclick="showOnly('aboutus');">About&nbsp;Us</div>
-        <div class="face2" onclick="showOnly('interactive');">Interactive</div>
-        <div class="face3" onclick="showOnly('medium'); ">The&nbsp;Medium</div>
-        <div class="face4" onclick="showOnly('enquiry');">Enquiry</div>
-        <div class="face5" onclick="showOnly('scienceengine'); ">ScienceEngine</div>
-        <div class="face6" onclick="showOnly('learningcycle');">Learning&nbsp;Fun</div>
-      </div>
-      <div class="cont1">
-        <div class="spinner">
-          <div class="face1" onclick="showOnly('learningcycle');">Learning&nbsp;Fun</div>
-          <div class="face2" onclick="showOnly('medium'); ">The&nbsp;Medium</div>
-          <div class="face3" onclick="showOnly('interactive');">Interactive</div>
-          <div class="face4" onclick="showOnly('scienceengine'); ">ScienceEngine</div>
-          <div class="face5" onclick="showOnly('enquiry');">Enquiry</div>
-          <div class="face6" onclick="showOnly('aboutus'); ">About&nbsp;Us</div>
-        </div>
-        <div class="cont1">
-          <div class="spinner">
-            <div class="face1" onclick="showOnly('medium'); ">The&nbsp;Medium</div>
-            <div class="face2" onclick="showOnly('learningcycle');">Learning&nbsp;Fun</div>
-            <div class="face3" onclick="showOnly('scienceengine'); ">ScienceEngine</div>
-            <div class="face4" onclick="showOnly('interactive');">Interactive</div>
-            <div class="face5" onclick="showOnly('aboutus'); ">About&nbsp;Us</div>
-            <div class="face6" onclick="showOnly('enquiry');">Enquiry</div>
+<body class="l-body type_boxed">
+<div class="l-preloader"></div>
+<!-- HEADER -->
+<div class="l-header">
+	<div class="l-header-h">
+
+		<!-- subheader -->
+		<div class="l-subheader">
+			<div class="l-subheader-h i-cf">
+			
+				<!-- logo -->
+				<div class="w-logo with_title">
+					<div class="w-logo-h">
+						<a class="w-logo-link" href="#home">
+							<img class="w-logo-title" src="img/logo.png" alt="MazaLearn">
+							<span class="w-logo-title">
+								<span class="w-logo-title-h">Maza Learn</span>
+							</span>
+						</a>
+						<div class="w-logo-slogan">
+							<div class="w-logo-slogan-h">Learn As You Play</div>
+						</div>
+					</div>
+				</div>
+			
+				<!-- nav -->
+				<nav class="w-nav">
+					<div class="w-nav-h">
+						<div class="w-nav-control">
+							<i class="icon-menu"></i>
+						</div>
+						<div class="w-nav-list layout_hor width_auto level_1">
+							<div class="w-nav-list-h">
+								<div class="w-nav-item level_1 active">
+									<div class="w-nav-item-h">
+										<a href="#home" class="w-nav-anchor level_1">Home</a>
+									</div>
+								</div>
+								<div class="w-nav-item level_1">
+									<div class="w-nav-item-h">
+										<a href="#portfolio" class="w-nav-anchor level_1">What We Believe</a>
+									</div>
+								</div>
+								<div class="w-nav-item level_1">
+									<div class="w-nav-item-h">
+										<a href="#features" class="w-nav-anchor level_1">The Science Game</a>
+									</div>
+								</div>
+								<div class="w-nav-item level_1">
+									<div class="w-nav-item-h">
+										<a href="#about" class="w-nav-anchor level_1">About Us</a>
+									</div>
+								</div>
+ 							</div>
+						</div>
+					</div>
+				</nav>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- /HEADER -->
+
+<!-- MAIN -->
+<div class="l-main">
+	<div class="l-main-h">
+	
+		<!-- page: HOME -->
+		<section id="home" class="l-submain colorstyle_3">
+			<div class="w-submain-bg" style="background-image:url(bg/bg-04.png)"></div>
+			<div class="l-submain-h i-cf">
+				<div class="l-content">
+					<div class="l-content-h g-html">
+
+						<div class="w-teaser">
+							<div class="w-teaser-h">
+								<div class="w-teaser-image">
+								
+									<img src="images/scienceengine.jpg" width=500 alt="">
+									
+								</div>
+								<div class="w-teaser-content">
+									
+									<h1 class="thin">Learn Science while you Play!</h1>
+									<p class="size_big thin">A Revolution in Learning<br>Available On Touch devices - Android and IOS</p>
+										
+								</div>
+							</div>
+						</div>
+						
+						<p class="for_btn type_fixed">
+							<a class="g-btn type_color" href="#features"><span>The Science Game</span></a>
+							<a class="g-btn type_dark" href="#portfolio"><span>What We Believe</span></a>
+						</p>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+	
+    <!-- page: Overview -->
+    <section id="portfolio" class="l-submain full_width full_height colorstyle_2">
+      <div class="w-submain-bg" style="background-image:"></div>
+      <div class="l-submain-h i-cf" style="padding-top:50px;padding-bottom:50px">
+        <div class="l-content" >
+          <div class="l-content-h g-html">
+
+            <h2 class="thin type_lined">What We Believe</h2>
+          
+            <div class="hr type_invisible"></div>
+
+            <div class="w-portfolio">
+              <div class="w-portfolio-h">
+                <div class="w-portfolio-list">
+                  <div class="w-portfolio-list-h">
+
+                    <div class="w-portfolio-item">
+                      <div class="w-portfolio-item-h">
+                        <a class="w-portfolio-item-anchor" href="javascript:void(0);">
+                          <div class="w-portfolio-item-image" style="background-image:url(images/confucius.jpg);"></div>
+                          <div class="w-portfolio-item-meta">
+                            <h2 class="w-portfolio-item-title">When I Do, I Understand</h2>
+                          </div>
+                          <div class="w-portfolio-item-hover"><i class="icon-plus"></i></div>
+                        </a>
+
+                        <div class="w-portfolio-item-details" style="display: none;">
+                          <div class="w-portfolio-item-details-h">
+                            <div class="w-portfolio-item-details-content">
+                              <div class="w-portfolio-item-details-content-preview">
+                                <img src="images/doinginteractivity.jpg" alt="I Do, I understand">
+                              </div>
+                              <div class="w-portfolio-item-details-content-text">
+                                <h3>I do, I understand</h3>
+                                <p>Words, images and videos are second person experiences and therefore not as effective as 
+                                   a direct, personal experience. An image is better than a thousand words and an experiment is better than a thousand videos.
+                                    
+                                </p>
+                                <p>Transmitting experiences to others is like "filling the bucket". It is far better to light a fire
+                                in the learner, make the learner experience and learn for himself or herself.  
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="w-portfolio-item-details-close"></div>
+                            <div class="w-portfolio-item-details-arrow to_prev"><i class="icon-left-open-big"></i></div>
+                            <div class="w-portfolio-item-details-arrow to_next"><i class="icon-right-open-big"></i></div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="w-portfolio-item"> 
+                      <div class="w-portfolio-item-h">
+                        <a class="w-portfolio-item-anchor" href="javascript:void(0);">
+                          <div class="w-portfolio-item-image" style="background-image:url(images/mitblackboard.jpg);"></div>
+                          <div class="w-portfolio-item-meta">
+                            <h2 class="w-portfolio-item-title">Medium affects Learning</h2>
+                          </div>
+                          <div class="w-portfolio-item-hover"><i class="icon-plus"></i></div>
+                        </a>
+                        
+                        <div class="w-portfolio-item-details" style="display: none;">
+                          <div class="w-portfolio-item-details-h">
+                            <div class="w-portfolio-item-details-content">
+                              <div class="w-portfolio-item-details-content-preview">
+                                <img src="images/medium.jpg" alt="The Medium affects Learning">
+                              </div>
+                              <div class="w-portfolio-item-details-content-text">
+                                <h3>The Medium Affects Learning</h3>
+                                <p>As Marshall McLuhan famously said - the medium is the message. 
+                                The medium of learning has a dramatic effect on its efficacy. 
+                                </p><p> Long back before writing, all teaching occurred through a teacher instructing pupils verbally. 
+                                 This evolved to using books and written material in a lecture format in medieval times.
+                                 Even today, this remains the predominant method of instruction.
+                                </p><p> Tablets bring alive formely esoteric topics
+                                and learners can interact with and experience scientific phenomenon 
+                                quickly and safely in a virtual reality provided by these devices.
+                                </p>
+                              </div>
+                            </div>
+                            
+                            <div class="w-portfolio-item-details-close"></div>
+                            <div class="w-portfolio-item-details-arrow to_prev"><i class="icon-left-open-big"></i></div>
+                            <div class="w-portfolio-item-details-arrow to_next"><i class="icon-right-open-big"></i></div>
+                            
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                    <div class="w-portfolio-item">
+                      <div class="w-portfolio-item-h">
+                        <a class="w-portfolio-item-anchor" href="javascript:void(0);">
+                          <div class="w-portfolio-item-image" style="background-image:url(images/kolbcycle.jpg);"></div>
+                          <div class="w-portfolio-item-meta">
+                            <h2 class="w-portfolio-item-title">The Learning Cycle</h2>
+                          </div>
+                          <div class="w-portfolio-item-hover"><i class="icon-plus"></i></div>
+                        </a>
+
+                        <div class="w-portfolio-item-details" style="display: none;">
+                          <div class="w-portfolio-item-details-h">
+                            <div class="w-portfolio-item-details-content">
+                              <div class="w-portfolio-item-details-content-preview">
+                                <img src="images/learningcycle.jpg" alt="">
+                              </div>
+                              <div class="w-portfolio-item-details-content-text">
+                                <h3>The Learning Cycle</h3>
+                                <p>Effective Learning is a cycle of multiple stages going through observation, reflection, abstraction and experimentation.
+                                Direct instruction rarely leads to conceptual understanding and learning.
+                                </p><p>Science which attempts to explain physical phenomenon needs to go 
+                                  hand in hand with experiments, observation and abstraction. Teaching science without experiential mechanisms
+                                  is like teaching a blind person about a rainbow. Learning material has to be 
+                                  carefully structured into modules which trigger the learning cycle and encourage rapid assimilation.
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="w-portfolio-item-details-close"></div>
+                            <div class="w-portfolio-item-details-arrow to_prev"><i class="icon-left-open-big"></i></div>
+                            <div class="w-portfolio-item-details-arrow to_next"><i class="icon-right-open-big"></i></div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="w-portfolio-item">
+                      <div class="w-portfolio-item-h">
+                        <a class="w-portfolio-item-anchor" href="javascript:void(0);">
+                          <div class="w-portfolio-item-image" style="background-image:url(images/doubt.jpg);"></div>
+                          <div class="w-portfolio-item-meta">
+                            <h2 class="w-portfolio-item-title">Doubt Leads to Learning</h2>
+                          </div>
+                          <div class="w-portfolio-item-hover"><i class="icon-plus"></i></div>
+                        </a>
+
+                        <div class="w-portfolio-item-details" style="display: none;">
+                          <div class="w-portfolio-item-details-h">
+                            <div class="w-portfolio-item-details-content">
+                              <div class="w-portfolio-item-details-content-preview">
+                                <img src="images/doubtenquiry.jpg" alt="">
+                              </div>
+                              <div class="w-portfolio-item-details-content-text">
+                                <h3>Doubt is Essential to Learning</h3>
+                                <p>Without doubt, without genuine enquiry, no learning can take place. All science is built 
+                                upon facts just as a house is buit of bricks. 
+                                But, paraphrasing Poincare, a collection of facts is no more a science than a pile of bricks is a house.
+                                </p><p> Doubts trigger alternative ideas, different explanations which culminate in understanding or 
+                                the realization that our current understanding is flawed. 
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="w-portfolio-item-details-close"></div>
+                            <div class="w-portfolio-item-details-arrow to_prev"><i class="icon-left-open-big"></i></div>
+                            <div class="w-portfolio-item-details-arrow to_next"><i class="icon-right-open-big"></i></div>
+
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
-    </div>
-    <div class="spinner1" id="scienceengine">
-       <img class="mainimg" src="images/scienceengine.jpg" height=400 onclick='showOnly("scienceengine")'>
-    </div>
-    <div class="spinner1" id="medium">
-       <img class="mainimg" src="images/medium.jpg" height=400 onclick='showOnly("medium")'>
-    </div>
-    <div class="spinner1" id="interactive">
-       <img class="mainimg" src="images/doinginteractivity.jpg" height=400 onclick='showOnly("interactive")'>
-    </div>
-    <div class="spinner1" id="aboutus">
-       <img class="mainimg" src="images/AboutUs.jpg" height=400 onclick='showOnly("aboutus")'>
-    </div>
-    <div class="spinner1" id="learningcycle">
-       <img class="mainimg" src="images/learningcycle.jpg" height=400 onclick='showOnly("learningcycle")'>
-    </div>
-    <div class="spinner1" id="enquiry">
-       <img class="mainimg" src="images/doubtenquiry.jpg" height=400 onclick='showOnly("enquiry")'>
-    </div>
-    <div id="presentation" style="visibility:hidden">
-      <div id="submenu">
-        <div class="cont3">
-          <div class="spinner" id="spin1">
-            <div class="face1" onclick="showPresentation();">Vision</div>
-            <div class="face2" onclick="showDemo();">Demo</div>
-            <div class="face3" onclick="showPresentation(); ">Vision</div>
-            <div class="face4" onclick="showDeno();">Demo</div>
-            <div class="face5" onclick="showPresentation(); ">Vision</div>
-            <div class="face6" onclick="showDemo();">Demo</div>
+    </section>
+
+		<!-- page: FEATURES -->
+		<section id="features" class="l-submain">
+			<div class="w-submain-bg" style="background-image:url(images/background.png);"></div>
+			<div class="l-submain-h i-cf">
+				<div class="l-content">
+					<div class="l-content-h g-html">
+
+						<h2 class="thin type_lined">The Science Game</h2>
+						
+						<div class="hr type_invisible"></div>
+						
+						<div class="g-cols">
+							<div class="one-third">
+							
+								<div class="w-iconbox">
+									<div class="w-iconbox-h">
+										<div class="w-iconbox-link">
+											<div class="w-iconbox-icon">
+												<i class="icon-rocket"></i>
+											</div>
+											<div class="w-iconbox-text">
+												<h4>Game Model</h4>
+												<p>Lively, engaging games which drive home basic science concepts and ideas while keeping science fun and interesting.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<div class="one-third">
+							
+								<div class="w-iconbox">
+									<div class="w-iconbox-h">
+										<div class="w-iconbox-link">
+											<div class="w-iconbox-icon">
+												<i class="icon-lightbulb"></i>
+											</div>
+											<div class="w-iconbox-text">
+												<h4>Fully Interactive</h4>
+												<p>Visual interactive feedback of science phenomena with simple explanations on demand. A picture is worth a 100 words. An experiment is worth a 1000 videos.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<div class="one-third">
+							
+								<div class="w-iconbox">
+									<div class="w-iconbox-h">
+										<div class="w-iconbox-link">
+											<div class="w-iconbox-icon">
+												<i class="icon-list"></i>
+											</div>
+											<div class="w-iconbox-text">
+												<h4>Control Panel</h4>
+												<p>Can control different parameters of the science bodies in the experiment. Slide, toggle, select to bring your experiment alive.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div class="hr type_invisible"></div>
+						
+						<div class="g-cols">
+							<div class="one-third">
+                <br/><br/>
+								<div class="w-iconbox">
+									<div class="w-iconbox-h">
+										<div class="w-iconbox-link">
+											<div class="w-iconbox-icon">
+												<i class="icon-mobile-1"></i>
+											</div>
+											<div class="w-iconbox-text">
+												<h4>Touch</h4>
+												<p>Touch manipulation of science bodies and their properties. Use your fingers to move, rotate and control the bodies.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+
+              <div class="one-third">           
+                 <img src="images/scienceengine.jpg">
+              </div>
+
+							<div class="one-third">
+							  <br/><br/>
+								<div class="w-iconbox">
+									<div class="w-iconbox-h">
+										<div class="w-iconbox-link">
+											<div class="w-iconbox-icon">
+												<i class="icon-flow-tree"></i>
+											</div>
+											<div class="w-iconbox-text">
+												<h4>Multiple Levels</h4>
+												<p>Learning split up into multiple units at different levels. Each unit has simple learning goals and explanations enabling on-demand revision.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					
+            <div class="hr type_invisible"></div>
+
+            <div class="g-cols">
+ 
+              <div class="one-third">
+              
+                <div class="w-iconbox">
+                  <div class="w-iconbox-h">
+                    <div class="w-iconbox-link">
+                      <div class="w-iconbox-icon">
+                        <i class="icon-magnet"></i>
+                      </div>
+                      <div class="w-iconbox-text">
+                        <h4>White Box Model</h4>
+                        <p>Simple mental picture of scientific phenomena. Once you grasp this picture of how the science works, science becomes play!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="one-third">
+              
+                <div class="w-iconbox">
+                  <div class="w-iconbox-h">
+                    <div class="w-iconbox-link">
+                      <div class="w-iconbox-icon">
+                        <i class="icon-thumbs-up"></i>
+                      </div>
+                      <div class="w-iconbox-text">
+                        <h4>Challenges</h4>
+                        <p>Probers ask questions which test understanding and provoke enquiry while tracking where hints and explanations are required.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="one-third">
+              
+                <div class="w-iconbox">
+                  <div class="w-iconbox-h">
+                    <div class="w-iconbox-link">
+                      <div class="w-iconbox-icon">
+                        <i class="icon-gauge"></i>
+                      </div>
+                      <div class="w-iconbox-text">
+                        <h4>Progress Metrics</h4>
+                        <p>Progress metrics are tracked for individual learning units. Multiple choice question answers are used to gauge and measure overall understanding.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+						<p class="for_btn type_fixed">
+							<a class="g-btn type_color" href="http://appstore.com/thesciencegame">
+							    <span>Apple Store for IOS</span></a>
+              <a class="g-btn type_color" href="https://play.google.com/store/apps/details?id=com.mazalearn.scienceengine">
+                  <span>GooglePlay for Android</span></a>
+						</p>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		
+    <!-- page: OUR TEAM -->
+    <section id="about" class="l-submain colorstyle_2">
+      <div class="w-submain-bg" style="background-image:url(images/splash.jpg);"></div>
+      <div class="l-submain-h i-cf">
+
+        <div class="l-content">
+          <div class="l-content-h g-html">
+          
+            <div class="w-block">         
+              <div class="w-block-h">         
+                <div class="w-block-header">
+                  <div class="w-block-header-bg" style="background-image:"></div>
+                  <div class="w-block-header-h">
+                    <h2 class="thin">Learning should be an exploration, an adventure. Maza means fun. 
+                                     Maza Learn was founded with the objective of making learning fun.
+                    </h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="l-content">
+          <div class="l-content-h g-html">
+
+            <h2>Founders</h2>
+            
+            <div class="hr type_invisible"></div>
+            
+            <div class="w-team type_carousel">
+              <div class="w-team-h">
+                <div class="w-team-list">
+                  <div class="w-team-list-h">
+                
+                    <div class="w-team-member w-team-item">
+                      <div class="w-team-member-h">
+                        <div class="w-team-member-image">
+                          <img src="images/sridharsundaram.jpg" height=300 alt="member photo" />
+                          <!--<div class="w-team-member-links">
+                            <div class="w-team-member-links-list">
+                              <a class="w-team-member-links-item" href="http://www.fb.com/" target="_blank"><i class="icon-facebook-circled"></i></a>
+                              <a class="w-team-member-links-item" href="http://www.twitter.com/" target="_blank"><i class="icon-twitter-circled"></i></a>
+                              <a class="w-team-member-links-item" href="http://www.linkedin.com/" target="_blank"><i class="icon-linkedin-circled"></i></a>
+                            </div>
+                          </div> -->
+                        </div>
+                        <div class="w-team-member-meta">
+                          <div class="w-team-member-meta-h">
+                            <h4 class="w-team-member-name">Sridhar Sundaram</h4>
+                            <div class="w-team-member-role">Co-Founder</div>
+                            <div class="w-team-member-description">
+                              <p>Aims to make learning a 100 times more effective. 
+                              <p>Formely worked at Google on ads monetization and speeding up the Internet. 
+                              <p>At Lotus Interworks, he built configuration platforms for telecom, lighting, industrial and HR applications.
+                              <p>Co-founded MindsEye, a company focused on adding intelligence to business systems, and sold it off. 
+                              <p>B.Tech IIT Delhi, Ph.D Cornell University.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <div class="w-team-member w-team-item">
+                      <div class="w-team-member-h">
+                        <div class="w-team-member-image">
+                          <img src="images/rishichandra.jpg" alt="Rishi Chandra photo" width=300 />
+                          <!--<div class="w-team-member-links">
+                            <div class="w-team-member-links-list">
+                              <a class="w-team-member-links-item" href="http://www.fb.com/" target="_blank"><i class="icon-facebook-circled"></i></a>
+                              <a class="w-team-member-links-item" href="http://www.twitter.com/" target="_blank"><i class="icon-twitter-circled"></i></a>
+                            </div>
+                          </div> -->
+                        </div>
+                        <div class="w-team-member-meta">
+                          <div class="w-team-member-meta-h">
+                            <h4 class="w-team-member-name">Rishi Chandra</h4>
+                            <div class="w-team-member-role">Co-Founder</div>
+                            <div class="w-team-member-description">
+                              <p>Earlier co-founded eTech (of eBookers), CommerciaMystica.
+                              <p>Produced an award-winning film.
+                              <p>Worked on GIS mapping at Manchitra and hyperlinked spreadsheets at InterSolutions. 
+                              <p>Delivered enterprise solutions at Infosys, HCL.
+                              <p>B.Tech IIT Kanpur</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                  </div>
+                </div>
+                <div class="w-team-arrow w-team-nav to_prev"><i class="icon-left-open-big"></i></div>
+                <div class="w-team-arrow w-team-nav to_next"><i class="icon-right-open-big"></i></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+            
+        <div class="l-content">
+          <div class="l-content-h g-html">
+          
+            <h2>Contact Us</h2>
+            
+            <div class="hr type_invisible"></div>
+            
+            <p class="size_big thin">Ready for a revolution in learning? Reach out to us.</p>
+            
+            <div class="w-contacts">
+              <div class="w-contacts-h">
+                <div class="w-contacts-list">
+                  <div class="w-contacts-item for_address">
+                    <i class="icon-location"></i>
+                    <span class="w-contacts-item-name">Address:</span>
+                    <span class="w-contacts-item-value">H-501, Mantri Espana (opp. Intel Campus), Outer Ring Road, Bangalore - 560103, India</span>
+                  </div>
+<!--                  <div class="w-contacts-item for_phone">
+                    <i class="icon-mobile"></i>
+                    <span class="w-contacts-item-name">Phone:</span>
+                    <span class="w-contacts-item-value">+321 123 456 7</span>
+                  </div> -->
+                  <div class="w-contacts-item for_email">
+                    <i class="icon-mail"></i>
+                    <span class="w-contacts-item-name">Email:</span>
+                    <span class="w-contacts-item-value"><a href="mailto:info@example.com">info@mazalearn.com</a></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-form contacts_form">
+              <div class="w-form-h">
+                <div class="w-form-open">
+                  <a class="g-btn type_color" href="javascript:void(0);"><span>Send Message</span></a>
+                </div>
+                <div class="contacts_form_form" style="display: none;">
+                  <div class="w-form-title">Message</div>
+                  <div class="w-form-close"></div>
+                  <form class="g-form" action="#" method="post" id="contact_form">
+                    <div class="g-form-group">
+                      <div class="g-form-group-rows">
+                        <div class="g-form-row" id="name_row">
+                          <div class="g-form-row-label">
+                            <label class="g-form-row-label-h" for="name">Your Name</label>
+                          </div>
+                          <div class="g-form-row-field">
+                            <i class="icon-user"></i>
+                            <div class="g-input">
+                              <input type="text" name="name" id="name">
+                            </div>
+                          </div>
+                          <div class="g-form-row-state" id="name_state"></div>
+                        </div>
+                        <div class="g-form-row" id="email_row">
+                          <div class="g-form-row-label">
+                            <label class="g-form-row-label-h" for="email">Email</label>
+                          </div>
+                          <div class="g-form-row-field">
+                            <i class="icon-mail"></i>
+                            <div class="g-input">
+                              <input type="email" name="email" id="email">
+                            </div>
+                          </div>
+                          <div class="g-form-row-state" id="email_state"></div>
+                        </div>
+                        <div class="g-form-row" id="phone_row">
+                          <div class="g-form-row-label">
+                            <label class="g-form-row-label-h" for="phone">Phone Number</label>
+                          </div>
+                          <div class="g-form-row-field">
+                            <i class="icon-mobile"></i>
+                            <div class="g-input">
+                              <input type="text" name="phone" id="phone">
+                            </div>
+                          </div>
+                          <div class="g-form-row-state" id="phone_state"></div>
+                        </div>
+                        <div class="g-form-row" id="message_row">
+                          <div class="g-form-row-label">
+                            <label class="g-form-row-label-h" for="message">Message</label>
+                          </div>
+                          <div class="g-form-row-field">
+                            <i class="icon-pencil"></i>
+                            <div class="g-input">
+                              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                            </div>
+                          </div>
+                          <div class="g-form-row-state" id="message_state"></div>
+                        </div>
+                        <div class="g-form-row">
+                          <div class="g-form-row-label"></div>
+                          <div class="g-form-row-field">
+                            <button class="g-btn type_color" id="message_send"><span>Send Message</span></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>
-    </div>
-    <div id="cssanimationsupport">
-    </div>
-    <script src="javascript/modernizr-latest.js"></script>
-    <script src="javascript/transitionsHelper.js"></script>
-    <script src="javascript/animationsHelper.js"></script>
-    <script src="javascript/jsfallback-master.js"></script>
-    <script>
-        var supportElement = document.getElementById("cssanimationsupport");
-        // Checking if CSS3 animations is supported
-        if (!Modernizr.cssanimations) {
-            // checking if getElementsByClassName is supported
-            if (document.getElementsByClassName) {
-                // if so, we can use our JS fallback library
-                supportElement.innerHTML = "CSS3 Animations <strong>are not supported</strong> by your browser, using fallback. Please use Chrome, Firefox or IE10.";
-                LoadJSAnimationsFallback();
-            }
-            else {
-                supportElement.innerHTML = "CSS3 Animations <strong>are not supported</strong> by your browser. Please use Chrome, Firefox or IE10";
-            }
-        }
-        else {
-            // if CSS3 animation is supported, we have nothing to do. 
-            // The *master.css stylesheets will be automatically applied & used.
-            supportElement.innerHTML = "";
-        }
-    </script>
+    </section>
+
+	</div>
+</div>
+<!-- /MAIN -->
+
+<!-- FOOTER -->
+<div class="l-footer">
+	<div class="l-footer-h">
+
+		<!-- subfooter -->
+		<div class="l-subfooter">
+			<div class="l-subfooter-h i-cf">
+
+				<div class="w-copyright">© 2013 Maza Learn Pvt Ltd. All rights reserved</div>
+
+				<div class="w-socials size_normal">
+					<div class="w-socials-h">
+						<div class="w-socials-list">
+
+							<div class="w-socials-item gplus">
+								<a class="w-socials-item-link" target="_blank" href="https://plus.google.com/118169567080515431022" rel="publisher">
+									<i class="icon-gplus"></i>
+								</a>
+								<div class="w-socials-item-popup">
+									<div class="w-socials-item-popup-h">
+										<span class="w-socials-item-popup-text">Google</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+<!-- /FOOTER -->
+
 </body>
 </html>

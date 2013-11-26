@@ -13,6 +13,13 @@ handlers:
   static_dir: javascript
   mime_type: text/javascript
   
+- url: /css
+  static_dir: css
+  mime_type: text/css
+  
+- url: /fonts
+  static_dir: fonts
+
 - url: /js
   static_dir: js
   mime_type: text/javascript
