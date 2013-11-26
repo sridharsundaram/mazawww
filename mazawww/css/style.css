@@ -1851,8 +1851,8 @@ input[type="submit"] {
 						background-size: cover;
 				}
 				.w-portfolio-item-meta {
-					padding: 60px 30px 30px;
-					background-image: linear-gradient(to top, rgba(50,50,50,0.5) 0px, transparent 100%);
+					padding: 30px 10px 20px 10px;
+					background-image: linear-gradient(to top, rgba(80,80,80,1) 0px, transparent 100%);
 					background-repeat: repeat-x;
 					text-align: left;
 					z-index: 12;
