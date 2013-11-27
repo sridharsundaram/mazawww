@@ -5,8 +5,8 @@ api_version: 1
 
 handlers:
 - url: /
-  static_files: static/index.html
-  upload: static/index.html
+  static_files: index.html
+  upload: index.html
   mime_type: text/html
 
 - url: /javascript
