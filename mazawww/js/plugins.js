@@ -192,7 +192,7 @@ jQuery(document).ready(function(){
 			if (errors === 0){
 				jQuery.ajax({
 					type: 'POST',
-					url: 'send_contact.php',
+					url: 'info',
 					dataType: 'json',
 					data: {
 						action: 'sendContact',
