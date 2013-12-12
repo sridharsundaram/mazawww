@@ -10,6 +10,11 @@ handlers:
   upload: index.html
   mime_type: text/html
 
+- url: /ios.html
+  static_files: distribution/ios.html
+  upload: distribution/ios.html
+  mime_type: text/html
+
 - url: /info
   script: main.application
 
@@ -30,6 +35,9 @@ handlers:
   
 - url: /img
   static_dir: img
+ 
+- url: /distribution
+  static_dir: distribution
   
 - url: /bg
   static_dir: bg
