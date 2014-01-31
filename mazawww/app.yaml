@@ -15,6 +15,16 @@ handlers:
   upload: distribution/ios.html
   mime_type: text/html
 
+- url: /distribution/scienceengineios-1.0.plist
+  static_files: distribution/scienceengineios-1.0.plist
+  upload: distribution/scienceengineios-1.0.plist
+  mime_type: application/xml
+
+- url: /distribution/scienceenginerobovm.ipa
+  static_files: distribution/scienceenginerobovm.ipa
+  upload: distribution/scienceenginerobovm.ipa
+  mime_type: application/octet-stream
+
 - url: /info
   script: main.application
 
