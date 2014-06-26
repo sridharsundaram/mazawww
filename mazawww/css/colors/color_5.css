@@ -296,16 +296,16 @@ select:focus {
 /* Testimonials Background Color */
 .w-testimonials-item-text,
 .g-html blockquote {
-	background-color: #444;
+	background-color: #fff;
 	}
 .w-testimonials-item-person:after {
-	border-top-color: #444;
+	border-top-color: #fff;
 	}
 	
 /* Testimonials Text Color */
 .w-testimonials-item-text,
 .g-html blockquote {
-	color: #fff;
+	color: #444;
 	}
 
 
