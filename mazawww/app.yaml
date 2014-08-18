@@ -15,6 +15,11 @@ handlers:
   upload: distribution/ios.html
   mime_type: text/html
 
+- url: /privacy.html
+  static_files: privacy.html
+  upload: privacy.html
+  mime_type: text/html
+
 - url: /distribution/scienceengineios-1.0.plist
   static_files: distribution/scienceengineios-1.0.plist
   upload: distribution/scienceengineios-1.0.plist
