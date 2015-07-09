@@ -73,6 +73,9 @@ handlers:
 - url: /scienceengine
   script: main.application
 
+- url: /science/(.*)
+  script: main.application
+
 - url: /(.*)
   static_files: static/\1
   upload: static/(.*)
