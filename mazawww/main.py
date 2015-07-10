@@ -3,7 +3,7 @@ import webapp2
 from info import Info
 
 def get_redirect_url(handler, *args, **kwargs):
-    return 'http://thesciencegame.mazalearn.com/reports/sciencejournal.jsp?topic=' + kwargs['topic'] + '&' + handler.request.query
+    return 'http://thesciencegame.mazalearn.com/reports/sciencejournal.jsp?topic=' + kwargs['topic'] + '&' + handler.request.query + '&tutor=D1'
 
 def main():
   pass
