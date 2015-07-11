@@ -15,6 +15,16 @@ handlers:
   upload: distribution/ios.html
   mime_type: text/html
 
+- url: /tos.html
+  static_files: tos.html
+  upload: tos.html
+  mime_type: text/html
+
+- url: /content.html
+  static_files: content.html
+  upload: content.html
+  mime_type: text/html
+
 - url: /privacy.html
   static_files: privacy.html
   upload: privacy.html
