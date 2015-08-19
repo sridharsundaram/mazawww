@@ -20,6 +20,11 @@ handlers:
   upload: tos.html
   mime_type: text/html
 
+- url: /launchapi.html
+  static_files: launchapi.html
+  upload: launchapi.html
+  mime_type: text/html
+
 - url: /content.html
   static_files: content.html
   upload: content.html

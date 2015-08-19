@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Launch API</title>
+
+
+</head>
+<body>
+
+<h1>Launch API</h1>
+
+<h2>Overview</h2>
+
+Any app on Android or on IOS can launch a specific instructional unit
+within Science Game - Electromagnetism by using a specific URL to
+invoke the app from within another app.<br>
+
+<h2>Example</h2>
+
+The custom URL &nbsp;is composed of a base part, a board part, a
+topic
+part, a subtopic part and a tutor part. For example:<br>
+
+<blockquote>mazalearn://www.mazalearn.com/science/igcse/electromagnetism?level=BarMagnetInduction&amp;tutor=C1.5</blockquote>
+
+<h2>Launch URL Details</h2>
+
+The generic form of the custom URL is
+<blockquote>mazalearn://www.mazalearn.com/science/<span style="font-weight: bold; font-style: italic; color: red;">board</span>/<span style="font-weight: bold; font-style: italic; color: red;">topic</span>?level=<span style="font-weight: bold; font-style: italic; color: red;">subtopic</span>&amp;tutor=<span style="font-weight: bold; font-style: italic; color: red;">tutorid</span>
+</blockquote>
+
+Here,<br>
+
+<ul>
+
+  <li><span style="font-weight: bold; font-style: italic;">board</span><span style="font-style: italic;"> </span>can be one of
+    <select>
+    <option>cbse</option>
+    <option>igcse</option>
+    <option>ngss</option>
+    <option>acara</option>
+    <option>kto12</option>
+    </select>
+
+  </li>
+
+  <li><span style="font-weight: bold; font-style: italic;">topic</span><span style="font-style: italic;"> </span>can be
+electromagnetism. &nbsp;New topic soon to be made available is
+waves.</li>
+
+  <li><span style="font-weight: bold; font-style: italic;">subtopic</span><span style="font-style: italic;"> </span>can be one of the
+subtopics of the topic. If topic
+is electromagnetism, it can be one of
+    <select>
+    <option>BarMagnet</option>
+    <option>Field</option>
+    <option>TwoWires</option>
+    <option>ElectroMagnet</option>
+    <option>BarMagnetInduction</option>
+    <option>ElectroMagnetInduction</option>
+    <option>DCMotor</option>
+    <option>ElectromagnetismReview</option>
+    <option>ElectromagnetismScienceTrain</option>
+    </select>
+
+  </li>
+
+  <li><span style="font-weight: bold; font-style: italic;">tutorid</span><span style="font-style: italic;"> </span>corresponds to
+one of the tutors within the
+subtopic. It may also be tidbit to launch the Maza News with tidbit shown.</li>
+
+</ul>
+
+Further, the level and tutor parts of the URL are optional.
+</body>
+</html>
