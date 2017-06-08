@@ -35,6 +35,11 @@ handlers:
   upload: privacy.html
   mime_type: text/html
 
+- url: /termsofuse.html
+  static_files: termsofuse.html
+  upload: termsofuse.html
+  mime_type: text/html
+
 - url: /press/press5Jul2015.html
   static_files: press/PressRelease-5Jul2015.html
   upload: press/PressRelease-5Jul2015.html
