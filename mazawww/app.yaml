@@ -50,6 +50,11 @@ handlers:
   upload: press/PressRelease-15Aug2015.html
   mime_type: text/html
 
+- url: /press/press15Jun2017.html
+  static_files: press/PressRelease-15Jun2017.html
+  upload: press/PressRelease-15Jun2017.html
+  mime_type: text/html
+
 - url: /distribution/scienceengineios-1.0.plist
   static_files: distribution/scienceengineios-1.0.plist
   upload: distribution/scienceengineios-1.0.plist
