@@ -10,6 +10,11 @@ handlers:
   upload: index.html
   mime_type: text/html
 
+- url: /pocketdoctor
+  static_files: pocketdoctor/index.html
+  upload: pocketdoctor/index.html
+  mime_type: text/html
+
 - url: /ios.html
   static_files: distribution/ios.html
   upload: distribution/ios.html
@@ -85,6 +90,9 @@ handlers:
   
 - url: /img
   static_dir: img
+ 
+- url: /pocketdoctor/img
+  static_dir: pocketdoctor/img
  
 - url: /distribution
   static_dir: distribution
