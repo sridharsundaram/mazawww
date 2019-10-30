@@ -15,6 +15,11 @@ handlers:
   upload: pocketdoctor/index.html
   mime_type: text/html
 
+- url: /physicsstudio
+  static_files: physicsstudio/index.html
+  upload: physicsstudio/index.html
+  mime_type: text/html
+
 - url: /ios.html
   static_files: distribution/ios.html
   upload: distribution/ios.html
@@ -93,6 +98,9 @@ handlers:
  
 - url: /pocketdoctor/img
   static_dir: pocketdoctor/img
+ 
+- url: /physicsstudio/img
+  static_dir: physicsstudio/img
  
 - url: /distribution
   static_dir: distribution
