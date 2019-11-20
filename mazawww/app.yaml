@@ -15,6 +15,11 @@ handlers:
   upload: pocketdoctor/index.html
   mime_type: text/html
 
+- url: /bandhoo
+  static_files: bandhoo/index.html
+  upload: bandhoo/index.html
+  mime_type: text/html
+
 - url: /physicsstudio
   static_files: physicsstudio/index.html
   upload: physicsstudio/index.html
@@ -98,6 +103,9 @@ handlers:
  
 - url: /pocketdoctor/img
   static_dir: pocketdoctor/img
+ 
+- url: /bandhoo/img
+  static_dir: bandhoo/img
  
 - url: /physicsstudio/img
   static_dir: physicsstudio/img
